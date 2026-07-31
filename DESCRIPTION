@@ -1,0 +1,36 @@
+Package: NicheTypeR
+Title: Context-Aware Annotation Auditing for Spatial Transcriptomics
+Version: 0.0.3
+Authors@R: c(
+    person("Zhequan", "Hu", role = "aut",
+           email = "s2024003064@student.pumc.edu.cn"),
+    person("Xingang", "Bi", role = c("aut", "cre"),
+           email = "bixingang@csco.org.cn")
+  )
+Description: Provides an interpretable evidence-fusion framework for auditing
+    cell type annotations in spatial transcriptomics. Candidate labels from
+    marker genes or reference mapping can be checked against pathway activity,
+    spatial niche compatibility, ligand-receptor consistency, and negative
+    marker conflicts, with blocked validation and spatial null controls.
+License: MIT + file LICENSE
+URL: https://github.com/123hzq321/NicheTypeR
+BugReports: https://github.com/123hzq321/NicheTypeR/issues
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
+Depends:
+    R (>= 4.1)
+Imports:
+    stats,
+    graphics,
+    utils
+Suggests:
+    FNN,
+    knitr,
+    rmarkdown,
+    SeuratObject,
+    SpatialExperiment,
+    SummarizedExperiment,
+    testthat (>= 3.0.0)
+VignetteBuilder: knitr
+Config/testthat/edition: 3

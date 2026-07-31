@@ -1,0 +1,12 @@
+accession,dataset_id,status,n_cells,preview_cells,preview_features,label_col,reason
+GSE240015,GEO_GSE240015_VISIUM_THYMUS_DOMAIN,benchmark_ready,3910.0,3910.0,2000.0,sample-prefixed leiden_1.0 spatial domain,"processed h5ad with expression, spatial coordinates, and spatial-domain labels prepared"
+GSE284005,GEO_GSE284005_MERSCOPE_MS,benchmark_ready,401794.0,9393.0,500.0,clean_sub,"expression, coordinates, and labels prepared"
+GSE327581,GEO_GSE327581_COSMX_AD_BRAIN,benchmark_ready,738722.0,5500.0,1207.0,RNA_Rerun_w_CosMx_Profile_Cell.Typing.InSituType.1_1_clusters,"expression, coordinates, and labels prepared"
+GSE333737,GEO_GSE333737_MERSCOPE_PANCREAS_VASCULAR,benchmark_ready,24222.0,2400.0,300.0,cell_type_final,"expression, coordinates, and labels prepared"
+GSE282124,,downloaded_candidate,,,,,"cell_by_gene and metadata available, but no explicit cell type label found in metadata header"
+GSE278614,,partial_download_candidate,,,,,CosMx h5ad files are inside a 1.3GB RAW archive; download timed out before completion
+GSE300613,,downloaded_candidate,,,,,"processed Visium h5ad files are readable, but obs only contains spot coordinates and no usable label column"
+GSE303162,,downloaded_candidate,,,,,"Visium spot data with coordinates, but no cell type/domain labels in downloaded files"
+GSE305735,,downloaded_candidate,,,,,expression-like FPKM files only; not benchmark-ready for spatial cell type annotation
+GSE325911,,downloaded_candidate,,,,,"counts and cell coordinates available across ROIs, but no explicit cell type label file found"
+GSE307719,,manifest_only_candidate,,,,,cell_by_gene and metadata exist but are packaged in a 228GB RAW archive; not downloaded in this pass

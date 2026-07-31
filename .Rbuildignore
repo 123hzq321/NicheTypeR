@@ -1,0 +1,5 @@
+^NicheTypeR_[0-9.]+[.]tar[.]gz$
+^NicheTypeR[.]zip$
+^LICENSE[.]md$
+^[.]github$
+^[.]gitignore$

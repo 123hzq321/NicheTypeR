@@ -1,0 +1,9 @@
+.Rhistory
+.RData
+.Ruserdata
+.Rproj.user
+*.Rcheck/
+*.tar.gz
+*.zip
+*.html
+*.pdf
