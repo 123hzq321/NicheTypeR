@@ -26,6 +26,32 @@ test_that("context-aware annotation smoke test runs", {
   expect_true(all(c("label", "confidence", "conflict_reason") %in% colnames(fit$calls)))
   expect_true(all(fit$calls$confidence >= 0 & fit$calls$confidence <= 1))
 
+  external_predictions <- data.frame(
+    cell_id = rownames(toy$metadata),
+    label = toy$metadata$true_label,
+    confidence = 0.9,
+    stringsAsFactors = FALSE
+  )
+  external <- score_external_labels(
+    external_predictions,
+    candidate_labels = colnames(marker),
+    confidence_col = "confidence"
+  )
+  external_aligned <- score_external_matrix(
+    external,
+    cells = rownames(marker),
+    candidate_labels = colnames(marker)
+  )
+  external_fit <- audit_external_annotation(
+    external_aligned,
+    marker = marker,
+    weights = c(reference = 1.5, marker = 0.5)
+  )
+  external_conflicts <- summarize_evidence_conflicts(external_fit, top_n = 3)
+  expect_equal(dim(external_aligned), dim(marker))
+  expect_equal(nrow(external_fit$calls), ncol(toy$expr))
+  expect_true(all(c("reference_label", "marker_label") %in% colnames(external_conflicts)))
+
   ev <- evaluate_calls(fit$calls, toy$metadata$true_label)
   expect_true(ev$summary$accuracy > 0.5)
 

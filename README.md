@@ -126,6 +126,46 @@ reference_profiles <- make_reference_profiles(toy$expr, toy$metadata$true_label)
 reference <- score_reference_similarity(toy$expr, reference_profiles)
 ```
 
+External annotation tools can also be used as the reference layer. Run SingleR,
+Seurat label transfer, CellTypist, scmap, or another atlas mapper outside
+NicheTypeR, then convert its labels or score matrix into auditable reference
+evidence:
+
+```r
+external_predictions <- data.frame(
+  cell_id = rownames(toy$metadata),
+  label = toy$metadata$true_label,
+  confidence = 0.9
+)
+
+external_reference <- score_external_labels(
+  external_predictions,
+  candidate_labels = colnames(result$evidence$marker),
+  confidence_col = "confidence"
+)
+
+audited <- audit_external_annotation(
+  external_reference,
+  marker = result$evidence$marker,
+  pathway = result$evidence$pathway,
+  neighborhood = result$evidence$neighborhood,
+  ligand_receptor = result$evidence$ligand_receptor,
+  weights = c(
+    reference = 1.5,
+    marker = 1,
+    pathway = 0.5,
+    neighborhood = 0.5,
+    ligand_receptor = 0.5
+  )
+)
+
+head(summarize_evidence_conflicts(audited))
+```
+
+This is the intended relationship to SingleR-like tools: the external method
+proposes a label, while NicheTypeR reports whether marker, pathway, local niche
+and ligand-receptor evidence support or challenge that proposal.
+
 ## Proving the contribution
 
 The package includes leave-one-evidence-out ablation so the spatial and
@@ -273,6 +313,19 @@ speed-superiority claim over non-equivalent external tools.
 The benchmark scripts used for the application-note snapshot are distributed
 with the manuscript supplementary materials and mirrored in the project archive
 when the accompanying data files are available.
+
+An additional reference-profile baseline add-on is included in
+`inst/benchmarks/REFERENCE_PROFILE_BASELINE.md`. It learns label centroids only
+inside training spatial blocks and scores held-out cells by cosine similarity.
+This gives a dependency-free reference-style comparator in the same broad
+family as SingleR, Seurat label transfer, CellTypist and scmap, without claiming
+to reimplement those tools.
+
+The audit case-study summary in
+`inst/benchmarks/ANNOTATION_AUDIT_CASE_STUDY.md` reports per-cell events where
+context or reference evidence rescues a marker-only error, harms a correct
+marker-only call, or changes a still-incorrect call. This is the most direct
+evidence for the package's intended role as an annotation-audit layer.
 
 Current cross-dataset result after direct GEO expansion: learned neighborhood
 passes the null-control guardrail in GSE202623 lesion MERFISH, Squidpy seqFISH,

@@ -1,4 +1,5 @@
 \name{NicheTypeR-core}
+\alias{audit_external_annotation}
 \alias{build_niche_graph}
 \alias{compare_call_sets}
 \alias{evaluate_calls}
@@ -17,6 +18,8 @@
 \alias{score_lr_context}
 \alias{score_markers}
 \alias{score_context_specific_neighborhood}
+\alias{score_external_labels}
+\alias{score_external_matrix}
 \alias{score_neighborhood}
 \alias{score_neighbor_majority}
 \alias{score_pathway_context}
@@ -60,6 +63,18 @@ learn_niche_prior(edges, labels, train_cells = NULL, candidate_labels = NULL,
 score_markers(expr, marker_db, cap = 3)
 
 score_reference_similarity(expr, reference_profiles, method = "spearman")
+
+score_external_labels(predictions, candidate_labels = NULL,
+  cell_id_col = "cell_id", label_col = "label", score_col = NULL,
+  confidence_col = NULL, predicted_score = 1, background_score = 0,
+  unknown_labels = c("unknown", "unassigned", "ambiguous", "NA"))
+
+score_external_matrix(score_matrix, cells = NULL, candidate_labels = NULL,
+  fill_missing = 0)
+
+audit_external_annotation(external_scores, ..., reference_name = "reference",
+  weights = NULL, temperature = 1, min_margin = 0.08,
+  component_min_margin = 0.05)
 
 score_pathway_context(expr, pathway_sets, label_pathways, cap = 3)
 
@@ -134,6 +149,18 @@ package when available and otherwise falls back to base R \code{dist}.}
 \item{marker_db}{Marker table with cell_type, gene, direction, and optional weight.}
 \item{cap}{Z-score cap for module scoring.}
 \item{reference_profiles}{Gene-by-label reference profile matrix.}
+\item{predictions}{External annotation result table with one row per cell.}
+\item{label_col}{Column containing predicted labels.}
+\item{score_col}{Optional external score column.}
+\item{confidence_col}{Optional external confidence column.}
+\item{predicted_score}{Score assigned to predicted labels when no score column
+is supplied.}
+\item{background_score}{Score assigned to non-predicted labels.}
+\item{unknown_labels}{External labels treated as unassigned.}
+\item{score_matrix}{External cell-by-label score matrix.}
+\item{fill_missing}{Score used for missing cells or labels.}
+\item{external_scores}{External cell-by-label score matrix to audit.}
+\item{reference_name}{Evidence name assigned to external scores.}
 \item{method}{Method argument for the relevant function, such as correlation
 method for reference similarity or weighting method for learned niche priors.}
 \item{pathway_sets}{Named list of pathway or metabolic gene sets.}

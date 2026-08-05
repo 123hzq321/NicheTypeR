@@ -1,0 +1,720 @@
+{
+  "models": {
+    "reference_profile": {
+      "score_names": [
+        "reference"
+      ],
+      "weights": {
+        "reference": 1.0
+      }
+    },
+    "marker_reference_profile": {
+      "score_names": [
+        "marker",
+        "reference"
+      ],
+      "weights": {
+        "marker": 1.5,
+        "reference": 1.5
+      }
+    },
+    "reference_profile_learned_neighborhood": {
+      "score_names": [
+        "reference",
+        "learned_neighborhood"
+      ],
+      "weights": {
+        "reference": 1.5,
+        "learned_neighborhood": 0.5
+      }
+    }
+  },
+  "summary": [
+    {
+      "dataset_id": "GSE202623_LESION",
+      "model": "reference_profile",
+      "n": 2485,
+      "accuracy": 0.5126760563,
+      "macro_f1": 0.4029714807,
+      "mean_confidence": 0.4382869098,
+      "mean_margin": 0.2564271066,
+      "conflict_rate": 0.461971831
+    },
+    {
+      "dataset_id": "GSE202623_LESION",
+      "model": "marker_reference_profile",
+      "n": 2485,
+      "accuracy": 0.661167002,
+      "macro_f1": 0.5489501082,
+      "mean_confidence": 0.4603148211,
+      "mean_margin": 0.27079288,
+      "conflict_rate": 0.4804828974
+    },
+    {
+      "dataset_id": "GSE202623_LESION",
+      "model": "reference_profile_learned_neighborhood",
+      "n": 2485,
+      "accuracy": 0.5440643863,
+      "macro_f1": 0.4169188309,
+      "mean_confidence": 0.4004390033,
+      "mean_margin": 0.2225594277,
+      "conflict_rate": 0.6498993964
+    },
+    {
+      "dataset_id": "SQUIDPY_SEQFISH",
+      "model": "reference_profile",
+      "n": 5389,
+      "accuracy": 0.5611430692,
+      "macro_f1": 0.5215984154,
+      "mean_confidence": 0.3767366114,
+      "mean_margin": 0.2639881232,
+      "conflict_rate": 0.3477454073
+    },
+    {
+      "dataset_id": "SQUIDPY_SEQFISH",
+      "model": "marker_reference_profile",
+      "n": 5389,
+      "accuracy": 0.6407496753,
+      "macro_f1": 0.573902303,
+      "mean_confidence": 0.4298651869,
+      "mean_margin": 0.3066775055,
+      "conflict_rate": 0.4052699944
+    },
+    {
+      "dataset_id": "SQUIDPY_SEQFISH",
+      "model": "reference_profile_learned_neighborhood",
+      "n": 5389,
+      "accuracy": 0.5889775469,
+      "macro_f1": 0.555881795,
+      "mean_confidence": 0.3321546523,
+      "mean_margin": 0.2163544529,
+      "conflict_rate": 0.5416589349
+    },
+    {
+      "dataset_id": "SQUIDPY_MERFISH",
+      "model": "reference_profile",
+      "n": 4030,
+      "accuracy": 0.7007444169,
+      "macro_f1": 0.7271144468,
+      "mean_confidence": 0.5921909138,
+      "mean_margin": 0.440805726,
+      "conflict_rate": 0.1421836228
+    },
+    {
+      "dataset_id": "SQUIDPY_MERFISH",
+      "model": "marker_reference_profile",
+      "n": 4030,
+      "accuracy": 0.7255583127,
+      "macro_f1": 0.664107401,
+      "mean_confidence": 0.5785695581,
+      "mean_margin": 0.4298777545,
+      "conflict_rate": 0.2109181141
+    },
+    {
+      "dataset_id": "SQUIDPY_MERFISH",
+      "model": "reference_profile_learned_neighborhood",
+      "n": 4030,
+      "accuracy": 0.7168734491,
+      "macro_f1": 0.6991014147,
+      "mean_confidence": 0.4971598487,
+      "mean_margin": 0.3483118865,
+      "conflict_rate": 0.394044665
+    },
+    {
+      "dataset_id": "SQUIDPY_SLIDESEQV2",
+      "model": "reference_profile",
+      "n": 2800,
+      "accuracy": 0.3153571429,
+      "macro_f1": 0.262096389,
+      "mean_confidence": 0.2919722528,
+      "mean_margin": 0.1724583736,
+      "conflict_rate": 0.5721428571
+    },
+    {
+      "dataset_id": "SQUIDPY_SLIDESEQV2",
+      "model": "marker_reference_profile",
+      "n": 2800,
+      "accuracy": 0.3832142857,
+      "macro_f1": 0.3492610018,
+      "mean_confidence": 0.2890308495,
+      "mean_margin": 0.1552201888,
+      "conflict_rate": 0.6257142857
+    },
+    {
+      "dataset_id": "SQUIDPY_SLIDESEQV2",
+      "model": "reference_profile_learned_neighborhood",
+      "n": 2800,
+      "accuracy": 0.3121428571,
+      "macro_f1": 0.2564551457,
+      "mean_confidence": 0.2636567906,
+      "mean_margin": 0.1438302684,
+      "conflict_rate": 0.6496428571
+    },
+    {
+      "dataset_id": "SQUIDPY_MIBITOF",
+      "model": "reference_profile",
+      "n": 2012,
+      "accuracy": 0.5516898608,
+      "macro_f1": 0.5063690264,
+      "mean_confidence": 0.4122056688,
+      "mean_margin": 0.2277082046,
+      "conflict_rate": 0.4314115308
+    },
+    {
+      "dataset_id": "SQUIDPY_MIBITOF",
+      "model": "marker_reference_profile",
+      "n": 2012,
+      "accuracy": 0.5631212724,
+      "macro_f1": 0.5237612169,
+      "mean_confidence": 0.4453743715,
+      "mean_margin": 0.2664600707,
+      "conflict_rate": 0.3260437376
+    },
+    {
+      "dataset_id": "SQUIDPY_MIBITOF",
+      "model": "reference_profile_learned_neighborhood",
+      "n": 2012,
+      "accuracy": 0.5293240557,
+      "macro_f1": 0.4831137128,
+      "mean_confidence": 0.3804227638,
+      "mean_margin": 0.1976219216,
+      "conflict_rate": 0.5715705765
+    },
+    {
+      "dataset_id": "SQUIDPY_VISIUM_FLUO",
+      "model": "reference_profile",
+      "n": 2753,
+      "accuracy": 0.53577915,
+      "macro_f1": 0.4834658474,
+      "mean_confidence": 0.3021398274,
+      "mean_margin": 0.1507265163,
+      "conflict_rate": 0.5150744642
+    },
+    {
+      "dataset_id": "SQUIDPY_VISIUM_FLUO",
+      "model": "marker_reference_profile",
+      "n": 2753,
+      "accuracy": 0.57137668,
+      "macro_f1": 0.5018802811,
+      "mean_confidence": 0.3469471111,
+      "mean_margin": 0.19874089,
+      "conflict_rate": 0.467853251
+    },
+    {
+      "dataset_id": "SQUIDPY_VISIUM_FLUO",
+      "model": "reference_profile_learned_neighborhood",
+      "n": 2753,
+      "accuracy": 0.5270613876,
+      "macro_f1": 0.4849165165,
+      "mean_confidence": 0.2862682207,
+      "mean_margin": 0.1335679938,
+      "conflict_rate": 0.6302215765
+    },
+    {
+      "dataset_id": "SQUIDPY_VISIUM_HNE",
+      "model": "reference_profile",
+      "n": 2688,
+      "accuracy": 0.5874255952,
+      "macro_f1": 0.5614331015,
+      "mean_confidence": 0.2753973319,
+      "mean_margin": 0.1294889124,
+      "conflict_rate": 0.6517857143
+    },
+    {
+      "dataset_id": "SQUIDPY_VISIUM_HNE",
+      "model": "marker_reference_profile",
+      "n": 2688,
+      "accuracy": 0.5691964286,
+      "macro_f1": 0.5344485877,
+      "mean_confidence": 0.3192005936,
+      "mean_margin": 0.1622869176,
+      "conflict_rate": 0.5699404762
+    },
+    {
+      "dataset_id": "SQUIDPY_VISIUM_HNE",
+      "model": "reference_profile_learned_neighborhood",
+      "n": 2688,
+      "accuracy": 0.609375,
+      "macro_f1": 0.5893411217,
+      "mean_confidence": 0.2600920041,
+      "mean_margin": 0.1152004865,
+      "conflict_rate": 0.7020089286
+    },
+    {
+      "dataset_id": "SQUIDPY_IMC",
+      "model": "reference_profile",
+      "n": 1744,
+      "accuracy": 0.3985091743,
+      "macro_f1": 0.3620410084,
+      "mean_confidence": 0.2635314619,
+      "mean_margin": 0.0960576696,
+      "conflict_rate": 0.6301605505
+    },
+    {
+      "dataset_id": "SQUIDPY_IMC",
+      "model": "marker_reference_profile",
+      "n": 1744,
+      "accuracy": 0.4105504587,
+      "macro_f1": 0.4159624661,
+      "mean_confidence": 0.2723977567,
+      "mean_margin": 0.1041225242,
+      "conflict_rate": 0.620412844
+    },
+    {
+      "dataset_id": "SQUIDPY_IMC",
+      "model": "reference_profile_learned_neighborhood",
+      "n": 1744,
+      "accuracy": 0.3927752294,
+      "macro_f1": 0.3603876193,
+      "mean_confidence": 0.2302589046,
+      "mean_margin": 0.068703871,
+      "conflict_rate": 0.7402522936
+    },
+    {
+      "dataset_id": "GEO_GSE240015_VISIUM_THYMUS_DOMAIN",
+      "model": "reference_profile",
+      "n": 3910,
+      "accuracy": 0.3621483376,
+      "macro_f1": 0.3007850444,
+      "mean_confidence": 0.252826231,
+      "mean_margin": 0.0838997606,
+      "conflict_rate": 0.7560102302
+    },
+    {
+      "dataset_id": "GEO_GSE240015_VISIUM_THYMUS_DOMAIN",
+      "model": "marker_reference_profile",
+      "n": 3910,
+      "accuracy": 0.3938618926,
+      "macro_f1": 0.3317898881,
+      "mean_confidence": 0.2425532837,
+      "mean_margin": 0.0776475453,
+      "conflict_rate": 0.7685421995
+    },
+    {
+      "dataset_id": "GEO_GSE240015_VISIUM_THYMUS_DOMAIN",
+      "model": "reference_profile_learned_neighborhood",
+      "n": 3910,
+      "accuracy": 0.3603580563,
+      "macro_f1": 0.2960773619,
+      "mean_confidence": 0.2269482388,
+      "mean_margin": 0.0653104256,
+      "conflict_rate": 0.8191815857
+    },
+    {
+      "dataset_id": "GEO_GSE284005_MERSCOPE_MS",
+      "model": "reference_profile",
+      "n": 9393,
+      "accuracy": 0.3460023422,
+      "macro_f1": 0.3364803475,
+      "mean_confidence": 0.339964809,
+      "mean_margin": 0.2142288837,
+      "conflict_rate": 0.4417119131
+    },
+    {
+      "dataset_id": "GEO_GSE284005_MERSCOPE_MS",
+      "model": "marker_reference_profile",
+      "n": 9393,
+      "accuracy": 0.428936442,
+      "macro_f1": 0.4062313372,
+      "mean_confidence": 0.2994916923,
+      "mean_margin": 0.1610746257,
+      "conflict_rate": 0.6432449697
+    },
+    {
+      "dataset_id": "GEO_GSE284005_MERSCOPE_MS",
+      "model": "reference_profile_learned_neighborhood",
+      "n": 9393,
+      "accuracy": 0.3420632386,
+      "macro_f1": 0.3227399857,
+      "mean_confidence": 0.2686236737,
+      "mean_margin": 0.1520404227,
+      "conflict_rate": 0.6228042159
+    },
+    {
+      "dataset_id": "GEO_GSE327581_COSMX_AD_BRAIN",
+      "model": "reference_profile",
+      "n": 5500,
+      "accuracy": 0.2614545455,
+      "macro_f1": 0.242721895,
+      "mean_confidence": 0.1746298359,
+      "mean_margin": 0.1178995722,
+      "conflict_rate": 0.7203636364
+    },
+    {
+      "dataset_id": "GEO_GSE327581_COSMX_AD_BRAIN",
+      "model": "marker_reference_profile",
+      "n": 5500,
+      "accuracy": 0.4790909091,
+      "macro_f1": 0.4614410295,
+      "mean_confidence": 0.293021411,
+      "mean_margin": 0.2082813815,
+      "conflict_rate": 0.6581818182
+    },
+    {
+      "dataset_id": "GEO_GSE327581_COSMX_AD_BRAIN",
+      "model": "reference_profile_learned_neighborhood",
+      "n": 5500,
+      "accuracy": 0.2747272727,
+      "macro_f1": 0.2411468977,
+      "mean_confidence": 0.1389443715,
+      "mean_margin": 0.086392081,
+      "conflict_rate": 0.8445454545
+    },
+    {
+      "dataset_id": "GEO_GSE333737_MERSCOPE_PANCREAS_VASCULAR",
+      "model": "reference_profile",
+      "n": 2400,
+      "accuracy": 0.7704166667,
+      "macro_f1": 0.7683143043,
+      "mean_confidence": 0.5809064126,
+      "mean_margin": 0.3543078372,
+      "conflict_rate": 0.1583333333
+    },
+    {
+      "dataset_id": "GEO_GSE333737_MERSCOPE_PANCREAS_VASCULAR",
+      "model": "marker_reference_profile",
+      "n": 2400,
+      "accuracy": 0.7695833333,
+      "macro_f1": 0.7670897391,
+      "mean_confidence": 0.5808740484,
+      "mean_margin": 0.3518661014,
+      "conflict_rate": 0.1566666667
+    },
+    {
+      "dataset_id": "GEO_GSE333737_MERSCOPE_PANCREAS_VASCULAR",
+      "model": "reference_profile_learned_neighborhood",
+      "n": 2400,
+      "accuracy": 0.7254166667,
+      "macro_f1": 0.7218646145,
+      "mean_confidence": 0.5288468438,
+      "mean_margin": 0.2883074524,
+      "conflict_rate": 0.6229166667
+    }
+  ],
+  "pairwise": [
+    {
+      "dataset_id": "GSE202623_LESION",
+      "baseline_model": "marker_only",
+      "comparator_model": "reference_profile",
+      "baseline_wrong_comparator_right": 79,
+      "baseline_right_comparator_wrong": 555,
+      "mcnemar_exact_p": 5.301153761e-89,
+      "accuracy_diff": -0.1915492958
+    },
+    {
+      "dataset_id": "GSE202623_LESION",
+      "baseline_model": "marker_only",
+      "comparator_model": "marker_reference_profile",
+      "baseline_wrong_comparator_right": 72,
+      "baseline_right_comparator_wrong": 179,
+      "mcnemar_exact_p": 0.0,
+      "accuracy_diff": -0.0430583501
+    },
+    {
+      "dataset_id": "GSE202623_LESION",
+      "baseline_model": "marker_only",
+      "comparator_model": "reference_profile_learned_neighborhood",
+      "baseline_wrong_comparator_right": 136,
+      "baseline_right_comparator_wrong": 534,
+      "mcnemar_exact_p": 1.326711619e-56,
+      "accuracy_diff": -0.1601609658
+    },
+    {
+      "dataset_id": "SQUIDPY_SEQFISH",
+      "baseline_model": "marker_only",
+      "comparator_model": "reference_profile",
+      "baseline_wrong_comparator_right": 478,
+      "baseline_right_comparator_wrong": 950,
+      "mcnemar_exact_p": 2.689525294e-36,
+      "accuracy_diff": -0.087585823
+    },
+    {
+      "dataset_id": "SQUIDPY_SEQFISH",
+      "baseline_model": "marker_only",
+      "comparator_model": "marker_reference_profile",
+      "baseline_wrong_comparator_right": 407,
+      "baseline_right_comparator_wrong": 450,
+      "mcnemar_exact_p": 0.1513326244,
+      "accuracy_diff": -0.0079792169
+    },
+    {
+      "dataset_id": "SQUIDPY_SEQFISH",
+      "baseline_model": "marker_only",
+      "comparator_model": "reference_profile_learned_neighborhood",
+      "baseline_wrong_comparator_right": 516,
+      "baseline_right_comparator_wrong": 838,
+      "mcnemar_exact_p": 1.871734916e-18,
+      "accuracy_diff": -0.0597513453
+    },
+    {
+      "dataset_id": "SQUIDPY_MERFISH",
+      "baseline_model": "marker_only",
+      "comparator_model": "reference_profile",
+      "baseline_wrong_comparator_right": 128,
+      "baseline_right_comparator_wrong": 461,
+      "mcnemar_exact_p": 4.403007805e-45,
+      "accuracy_diff": -0.082630273
+    },
+    {
+      "dataset_id": "SQUIDPY_MERFISH",
+      "baseline_model": "marker_only",
+      "comparator_model": "marker_reference_profile",
+      "baseline_wrong_comparator_right": 101,
+      "baseline_right_comparator_wrong": 334,
+      "mcnemar_exact_p": 3.456021497e-30,
+      "accuracy_diff": -0.0578163772
+    },
+    {
+      "dataset_id": "SQUIDPY_MERFISH",
+      "baseline_model": "marker_only",
+      "comparator_model": "reference_profile_learned_neighborhood",
+      "baseline_wrong_comparator_right": 170,
+      "baseline_right_comparator_wrong": 438,
+      "mcnemar_exact_p": 3.267270745e-28,
+      "accuracy_diff": -0.0665012407
+    },
+    {
+      "dataset_id": "SQUIDPY_SLIDESEQV2",
+      "baseline_model": "marker_only",
+      "comparator_model": "reference_profile",
+      "baseline_wrong_comparator_right": 252,
+      "baseline_right_comparator_wrong": 476,
+      "mcnemar_exact_p": 8.025043401e-17,
+      "accuracy_diff": -0.08
+    },
+    {
+      "dataset_id": "SQUIDPY_SLIDESEQV2",
+      "baseline_model": "marker_only",
+      "comparator_model": "marker_reference_profile",
+      "baseline_wrong_comparator_right": 169,
+      "baseline_right_comparator_wrong": 203,
+      "mcnemar_exact_p": 0.0869501189,
+      "accuracy_diff": -0.0121428571
+    },
+    {
+      "dataset_id": "SQUIDPY_SLIDESEQV2",
+      "baseline_model": "marker_only",
+      "comparator_model": "reference_profile_learned_neighborhood",
+      "baseline_wrong_comparator_right": 258,
+      "baseline_right_comparator_wrong": 491,
+      "mcnemar_exact_p": 1.270346942e-17,
+      "accuracy_diff": -0.0832142857
+    },
+    {
+      "dataset_id": "SQUIDPY_MIBITOF",
+      "baseline_model": "marker_only",
+      "comparator_model": "reference_profile",
+      "baseline_wrong_comparator_right": 162,
+      "baseline_right_comparator_wrong": 158,
+      "mcnemar_exact_p": 0.8668488319,
+      "accuracy_diff": 0.0019880716
+    },
+    {
+      "dataset_id": "SQUIDPY_MIBITOF",
+      "baseline_model": "marker_only",
+      "comparator_model": "marker_reference_profile",
+      "baseline_wrong_comparator_right": 87,
+      "baseline_right_comparator_wrong": 60,
+      "mcnemar_exact_p": 0.0316454094,
+      "accuracy_diff": 0.0134194831
+    },
+    {
+      "dataset_id": "SQUIDPY_MIBITOF",
+      "baseline_model": "marker_only",
+      "comparator_model": "reference_profile_learned_neighborhood",
+      "baseline_wrong_comparator_right": 159,
+      "baseline_right_comparator_wrong": 200,
+      "mcnemar_exact_p": 0.034616208,
+      "accuracy_diff": -0.0203777336
+    },
+    {
+      "dataset_id": "SQUIDPY_VISIUM_FLUO",
+      "baseline_model": "marker_only",
+      "comparator_model": "reference_profile",
+      "baseline_wrong_comparator_right": 219,
+      "baseline_right_comparator_wrong": 284,
+      "mcnemar_exact_p": 0.0042764515,
+      "accuracy_diff": -0.0236106066
+    },
+    {
+      "dataset_id": "SQUIDPY_VISIUM_FLUO",
+      "baseline_model": "marker_only",
+      "comparator_model": "marker_reference_profile",
+      "baseline_wrong_comparator_right": 130,
+      "baseline_right_comparator_wrong": 97,
+      "mcnemar_exact_p": 0.0334476108,
+      "accuracy_diff": 0.0119869234
+    },
+    {
+      "dataset_id": "SQUIDPY_VISIUM_FLUO",
+      "baseline_model": "marker_only",
+      "comparator_model": "reference_profile_learned_neighborhood",
+      "baseline_wrong_comparator_right": 257,
+      "baseline_right_comparator_wrong": 346,
+      "mcnemar_exact_p": 0.0003312526,
+      "accuracy_diff": -0.0323283691
+    },
+    {
+      "dataset_id": "SQUIDPY_VISIUM_HNE",
+      "baseline_model": "marker_only",
+      "comparator_model": "reference_profile",
+      "baseline_wrong_comparator_right": 415,
+      "baseline_right_comparator_wrong": 220,
+      "mcnemar_exact_p": 0.0,
+      "accuracy_diff": 0.0725446429
+    },
+    {
+      "dataset_id": "SQUIDPY_VISIUM_HNE",
+      "baseline_model": "marker_only",
+      "comparator_model": "marker_reference_profile",
+      "baseline_wrong_comparator_right": 204,
+      "baseline_right_comparator_wrong": 58,
+      "mcnemar_exact_p": 3.152030065e-20,
+      "accuracy_diff": 0.0543154762
+    },
+    {
+      "dataset_id": "SQUIDPY_VISIUM_HNE",
+      "baseline_model": "marker_only",
+      "comparator_model": "reference_profile_learned_neighborhood",
+      "baseline_wrong_comparator_right": 458,
+      "baseline_right_comparator_wrong": 204,
+      "mcnemar_exact_p": 2.319882039e-23,
+      "accuracy_diff": 0.0944940476
+    },
+    {
+      "dataset_id": "SQUIDPY_IMC",
+      "baseline_model": "marker_only",
+      "comparator_model": "reference_profile",
+      "baseline_wrong_comparator_right": 124,
+      "baseline_right_comparator_wrong": 114,
+      "mcnemar_exact_p": 0.5597268005,
+      "accuracy_diff": 0.005733945
+    },
+    {
+      "dataset_id": "SQUIDPY_IMC",
+      "baseline_model": "marker_only",
+      "comparator_model": "marker_reference_profile",
+      "baseline_wrong_comparator_right": 80,
+      "baseline_right_comparator_wrong": 49,
+      "mcnemar_exact_p": 0.0080076732,
+      "accuracy_diff": 0.0177752294
+    },
+    {
+      "dataset_id": "SQUIDPY_IMC",
+      "baseline_model": "marker_only",
+      "comparator_model": "reference_profile_learned_neighborhood",
+      "baseline_wrong_comparator_right": 120,
+      "baseline_right_comparator_wrong": 120,
+      "mcnemar_exact_p": 1.0,
+      "accuracy_diff": 0.0
+    },
+    {
+      "dataset_id": "GEO_GSE240015_VISIUM_THYMUS_DOMAIN",
+      "baseline_model": "marker_only",
+      "comparator_model": "reference_profile",
+      "baseline_wrong_comparator_right": 776,
+      "baseline_right_comparator_wrong": 688,
+      "mcnemar_exact_p": 0.0229466476,
+      "accuracy_diff": 0.0225063939
+    },
+    {
+      "dataset_id": "GEO_GSE240015_VISIUM_THYMUS_DOMAIN",
+      "baseline_model": "marker_only",
+      "comparator_model": "marker_reference_profile",
+      "baseline_wrong_comparator_right": 475,
+      "baseline_right_comparator_wrong": 263,
+      "mcnemar_exact_p": 0.0,
+      "accuracy_diff": 0.0542199488
+    },
+    {
+      "dataset_id": "GEO_GSE240015_VISIUM_THYMUS_DOMAIN",
+      "baseline_model": "marker_only",
+      "comparator_model": "reference_profile_learned_neighborhood",
+      "baseline_wrong_comparator_right": 800,
+      "baseline_right_comparator_wrong": 719,
+      "mcnemar_exact_p": 0.0400731437,
+      "accuracy_diff": 0.0207161125
+    },
+    {
+      "dataset_id": "GEO_GSE284005_MERSCOPE_MS",
+      "baseline_model": "marker_only",
+      "comparator_model": "reference_profile",
+      "baseline_wrong_comparator_right": 926,
+      "baseline_right_comparator_wrong": 2369,
+      "mcnemar_exact_p": 5.230191856e-144,
+      "accuracy_diff": -0.1536250399
+    },
+    {
+      "dataset_id": "GEO_GSE284005_MERSCOPE_MS",
+      "baseline_model": "marker_only",
+      "comparator_model": "marker_reference_profile",
+      "baseline_wrong_comparator_right": 828,
+      "baseline_right_comparator_wrong": 1492,
+      "mcnemar_exact_p": 1.094096935e-43,
+      "accuracy_diff": -0.0706909401
+    },
+    {
+      "dataset_id": "GEO_GSE284005_MERSCOPE_MS",
+      "baseline_model": "marker_only",
+      "comparator_model": "reference_profile_learned_neighborhood",
+      "baseline_wrong_comparator_right": 915,
+      "baseline_right_comparator_wrong": 2395,
+      "mcnemar_exact_p": 6.088175121e-151,
+      "accuracy_diff": -0.1575641435
+    },
+    {
+      "dataset_id": "GEO_GSE327581_COSMX_AD_BRAIN",
+      "baseline_model": "marker_only",
+      "comparator_model": "reference_profile",
+      "baseline_wrong_comparator_right": 345,
+      "baseline_right_comparator_wrong": 1624,
+      "mcnemar_exact_p": 7.598814346e-198,
+      "accuracy_diff": -0.2325454545
+    },
+    {
+      "dataset_id": "GEO_GSE327581_COSMX_AD_BRAIN",
+      "baseline_model": "marker_only",
+      "comparator_model": "marker_reference_profile",
+      "baseline_wrong_comparator_right": 296,
+      "baseline_right_comparator_wrong": 378,
+      "mcnemar_exact_p": 0.0017878054,
+      "accuracy_diff": -0.0149090909
+    },
+    {
+      "dataset_id": "GEO_GSE327581_COSMX_AD_BRAIN",
+      "baseline_model": "marker_only",
+      "comparator_model": "reference_profile_learned_neighborhood",
+      "baseline_wrong_comparator_right": 379,
+      "baseline_right_comparator_wrong": 1585,
+      "mcnemar_exact_p": 8.58711122e-175,
+      "accuracy_diff": -0.2192727273
+    },
+    {
+      "dataset_id": "GEO_GSE333737_MERSCOPE_PANCREAS_VASCULAR",
+      "baseline_model": "marker_only",
+      "comparator_model": "reference_profile",
+      "baseline_wrong_comparator_right": 119,
+      "baseline_right_comparator_wrong": 93,
+      "mcnemar_exact_p": 0.0857373406,
+      "accuracy_diff": 0.0108333333
+    },
+    {
+      "dataset_id": "GEO_GSE333737_MERSCOPE_PANCREAS_VASCULAR",
+      "baseline_model": "marker_only",
+      "comparator_model": "marker_reference_profile",
+      "baseline_wrong_comparator_right": 67,
+      "baseline_right_comparator_wrong": 43,
+      "mcnemar_exact_p": 0.0278508881,
+      "accuracy_diff": 0.01
+    },
+    {
+      "dataset_id": "GEO_GSE333737_MERSCOPE_PANCREAS_VASCULAR",
+      "baseline_model": "marker_only",
+      "comparator_model": "reference_profile_learned_neighborhood",
+      "baseline_wrong_comparator_right": 126,
+      "baseline_right_comparator_wrong": 208,
+      "mcnemar_exact_p": 8.4603e-06,
+      "accuracy_diff": -0.0341666667
+    }
+  ]
+}

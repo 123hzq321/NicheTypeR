@@ -3,5 +3,5 @@ bibentry(
   title = "NicheTypeR: context-aware annotation auditing for spatial transcriptomics",
   author = personList(person("Zhequan", "Hu"), person("Xingang", "Bi")),
   year = "2026",
-  note = "R package version 0.0.3"
+  note = "R package version 0.0.4"
 )

@@ -25,6 +25,15 @@ The runtime and memory snapshot is:
 - `RUNTIME_MEMORY_BENCHMARK_dataset_summary.csv`
 - `RUNTIME_MEMORY_BENCHMARK_stage_times.csv`
 
+Reference-style and audit-event add-ons are:
+
+- `REFERENCE_PROFILE_BASELINE.md`
+- `REFERENCE_PROFILE_BASELINE_summary.csv`
+- `REFERENCE_PROFILE_BASELINE_pairwise.csv`
+- `ANNOTATION_AUDIT_CASE_STUDY.md`
+- `ANNOTATION_AUDIT_CASE_STUDY_summary.csv`
+- `ANNOTATION_AUDIT_CASE_STUDY_examples.csv`
+
 For an installation-free smoke test, use the simulated-data workflow:
 
 ```r

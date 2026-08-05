@@ -1,0 +1,73 @@
+dataset_id,comparator_model,n,context_rescue,context_harm,changed_but_still_wrong,unchanged,rescue_rate,harm_rate,net_rescue_minus_harm,learned_passes_guardrail,smoothing_passes_guardrail,context_specific_passes_guardrail,guardrail_interpretation
+GEO_GSE240015_VISIUM_THYMUS_DOMAIN,reference_profile,3910,776,688,1263,1183,0.19846547314578006,0.17595907928388746,88,False,True,False,simple spatial smoothing beats marker and random smoothing
+GEO_GSE284005_MERSCOPE_MS,reference_profile,9393,926,2369,2757,3341,0.09858405195358245,0.25220909187692964,-1443,False,False,False,context signal is not specific under null controls
+GEO_GSE327581_COSMX_AD_BRAIN,reference_profile,5500,345,1624,1928,1603,0.06272727272727273,0.2952727272727273,-1279,True,False,False,learned neighborhood beats marker and null controls
+GEO_GSE333737_MERSCOPE_PANCREAS_VASCULAR,reference_profile,1089,45,37,19,988,0.04132231404958678,0.03397612488521579,8,False,False,False,context signal is not specific under null controls
+GSE202623_LESION,reference_profile,2485,79,555,251,1600,0.0317907444668008,0.22334004024144868,-476,True,False,False,learned neighborhood beats marker and null controls
+SQUIDPY_IMC,reference_profile,1744,124,114,239,1267,0.07110091743119266,0.06536697247706422,10,False,False,False,context signal is not specific under null controls
+SQUIDPY_MERFISH,reference_profile,4030,128,461,277,3164,0.03176178660049628,0.11439205955334987,-333,False,False,False,context signal is not specific under null controls
+SQUIDPY_MIBITOF,reference_profile,2012,162,158,201,1491,0.0805168986083499,0.07852882703777336,4,False,False,False,context signal is not specific under null controls
+SQUIDPY_SEQFISH,reference_profile,5389,478,950,590,3371,0.08869920207830767,0.1762850250510299,-472,True,True,False,learned neighborhood beats marker and null controls
+SQUIDPY_SLIDESEQV2,reference_profile,2800,252,476,829,1243,0.09,0.17,-224,False,False,False,context signal is not specific under null controls
+SQUIDPY_VISIUM_FLUO,reference_profile,2753,219,284,381,1869,0.07954958227388303,0.10316018888485289,-65,False,True,False,simple spatial smoothing beats marker and random smoothing
+SQUIDPY_VISIUM_HNE,reference_profile,2688,415,220,319,1734,0.15438988095238096,0.0818452380952381,195,False,False,False,context signal is not specific under null controls
+GEO_GSE240015_VISIUM_THYMUS_DOMAIN,marker_reference_profile,3910,475,263,661,2511,0.12148337595907928,0.06726342710997442,212,False,True,False,simple spatial smoothing beats marker and random smoothing
+GEO_GSE284005_MERSCOPE_MS,marker_reference_profile,9393,828,1492,2159,4914,0.08815075055892686,0.15884169062067496,-664,False,False,False,context signal is not specific under null controls
+GEO_GSE327581_COSMX_AD_BRAIN,marker_reference_profile,5500,296,378,703,4123,0.05381818181818182,0.06872727272727273,-82,True,False,False,learned neighborhood beats marker and null controls
+GEO_GSE333737_MERSCOPE_PANCREAS_VASCULAR,marker_reference_profile,1083,33,16,8,1026,0.030470914127423823,0.014773776546629732,17,False,False,False,context signal is not specific under null controls
+GSE202623_LESION,marker_reference_profile,2485,72,179,156,2078,0.0289738430583501,0.07203219315895372,-107,True,False,False,learned neighborhood beats marker and null controls
+SQUIDPY_IMC,marker_reference_profile,1744,80,49,137,1478,0.045871559633027525,0.02809633027522936,31,False,False,False,context signal is not specific under null controls
+SQUIDPY_MERFISH,marker_reference_profile,4030,101,334,210,3385,0.025062034739454096,0.08287841191066997,-233,False,False,False,context signal is not specific under null controls
+SQUIDPY_MIBITOF,marker_reference_profile,2012,87,60,115,1750,0.04324055666003976,0.02982107355864811,27,False,False,False,context signal is not specific under null controls
+SQUIDPY_SEQFISH,marker_reference_profile,5389,407,450,329,4203,0.07552421599554648,0.08350343291890888,-43,True,True,False,learned neighborhood beats marker and null controls
+SQUIDPY_SLIDESEQV2,marker_reference_profile,2800,169,203,389,2039,0.06035714285714286,0.0725,-34,False,False,False,context signal is not specific under null controls
+SQUIDPY_VISIUM_FLUO,marker_reference_profile,2753,130,97,200,2326,0.0472212132219397,0.03523428986560116,33,False,True,False,simple spatial smoothing beats marker and random smoothing
+SQUIDPY_VISIUM_HNE,marker_reference_profile,2688,204,58,157,2269,0.07589285714285714,0.021577380952380952,146,False,False,False,context signal is not specific under null controls
+GEO_GSE240015_VISIUM_THYMUS_DOMAIN,marker_spatial_smoothing,3910,133,60,207,3510,0.0340153452685422,0.015345268542199489,73,False,True,False,simple spatial smoothing beats marker and random smoothing
+GEO_GSE284005_MERSCOPE_MS,marker_spatial_smoothing,9393,188,153,309,8743,0.02001490471627808,0.016288725646758224,35,False,False,False,context signal is not specific under null controls
+GEO_GSE327581_COSMX_AD_BRAIN,marker_spatial_smoothing,5500,64,42,188,5206,0.011636363636363636,0.0076363636363636364,22,True,False,False,learned neighborhood beats marker and null controls
+GEO_GSE333737_MERSCOPE_PANCREAS_VASCULAR,marker_spatial_smoothing,2400,18,16,13,2353,0.0075,0.006666666666666667,2,False,False,False,context signal is not specific under null controls
+GSE202623_LESION,marker_spatial_smoothing,2485,10,11,12,2452,0.004024144869215292,0.004426559356136821,-1,True,False,False,learned neighborhood beats marker and null controls
+SQUIDPY_IMC,marker_spatial_smoothing,1744,57,42,83,1562,0.03268348623853211,0.02408256880733945,15,False,False,False,context signal is not specific under null controls
+SQUIDPY_MERFISH,marker_spatial_smoothing,4030,51,35,27,3917,0.012655086848635236,0.008684863523573201,16,False,False,False,context signal is not specific under null controls
+SQUIDPY_MIBITOF,marker_spatial_smoothing,2012,29,37,43,1903,0.01441351888667992,0.018389662027833,-8,False,False,False,context signal is not specific under null controls
+SQUIDPY_SEQFISH,marker_spatial_smoothing,5389,58,20,57,5254,0.010762664687326035,0.0037112636852848395,38,True,True,False,learned neighborhood beats marker and null controls
+SQUIDPY_SLIDESEQV2,marker_spatial_smoothing,2800,27,27,82,2664,0.009642857142857142,0.009642857142857142,0,False,False,False,context signal is not specific under null controls
+SQUIDPY_VISIUM_FLUO,marker_spatial_smoothing,2753,105,42,94,2512,0.03814021067925899,0.015256084271703597,63,False,True,False,simple spatial smoothing beats marker and random smoothing
+SQUIDPY_VISIUM_HNE,marker_spatial_smoothing,2688,194,45,82,2367,0.07217261904761904,0.016741071428571428,149,False,False,False,context signal is not specific under null controls
+GEO_GSE240015_VISIUM_THYMUS_DOMAIN,marker_learned_neighborhood,3910,217,265,433,2995,0.055498721227621485,0.06777493606138107,-48,False,True,False,simple spatial smoothing beats marker and random smoothing
+GEO_GSE284005_MERSCOPE_MS,marker_learned_neighborhood,9393,149,137,290,8817,0.015862876610241668,0.014585329500692005,12,False,False,False,context signal is not specific under null controls
+GEO_GSE327581_COSMX_AD_BRAIN,marker_learned_neighborhood,5500,203,138,486,4673,0.03690909090909091,0.02509090909090909,65,True,False,False,learned neighborhood beats marker and null controls
+GEO_GSE333737_MERSCOPE_PANCREAS_VASCULAR,marker_learned_neighborhood,2400,16,19,10,2355,0.006666666666666667,0.007916666666666667,-3,False,False,False,context signal is not specific under null controls
+GSE202623_LESION,marker_learned_neighborhood,2485,71,39,108,2267,0.02857142857142857,0.015694164989939637,32,True,False,False,learned neighborhood beats marker and null controls
+SQUIDPY_IMC,marker_learned_neighborhood,1744,26,28,53,1637,0.014908256880733946,0.016055045871559634,-2,False,False,False,context signal is not specific under null controls
+SQUIDPY_MERFISH,marker_learned_neighborhood,4030,36,21,23,3950,0.008933002481389578,0.005210918114143921,15,False,False,False,context signal is not specific under null controls
+SQUIDPY_MIBITOF,marker_learned_neighborhood,2012,23,33,36,1920,0.01143141153081511,0.016401590457256462,-10,False,False,False,context signal is not specific under null controls
+SQUIDPY_SEQFISH,marker_learned_neighborhood,5389,148,90,102,5049,0.027463351271107814,0.01670068658378178,58,True,True,False,learned neighborhood beats marker and null controls
+SQUIDPY_SLIDESEQV2,marker_learned_neighborhood,2800,6,4,19,2771,0.002142857142857143,0.0014285714285714286,2,False,False,False,context signal is not specific under null controls
+SQUIDPY_VISIUM_FLUO,marker_learned_neighborhood,2753,222,61,169,2301,0.08063930257900472,0.022157646204140936,161,False,True,False,simple spatial smoothing beats marker and random smoothing
+SQUIDPY_VISIUM_HNE,marker_learned_neighborhood,2688,158,59,74,2397,0.058779761904761904,0.02194940476190476,99,False,False,False,context signal is not specific under null controls
+GEO_GSE240015_VISIUM_THYMUS_DOMAIN,reference_profile_learned_neighborhood,3910,800,719,1255,1136,0.20460358056265984,0.18388746803069053,81,False,True,False,simple spatial smoothing beats marker and random smoothing
+GEO_GSE284005_MERSCOPE_MS,reference_profile_learned_neighborhood,9393,915,2395,2779,3304,0.09741296710316193,0.25497711061428724,-1480,False,False,False,context signal is not specific under null controls
+GEO_GSE327581_COSMX_AD_BRAIN,reference_profile_learned_neighborhood,5500,379,1585,1926,1610,0.0689090909090909,0.2881818181818182,-1206,True,False,False,learned neighborhood beats marker and null controls
+GEO_GSE333737_MERSCOPE_PANCREAS_VASCULAR,reference_profile_learned_neighborhood,788,39,62,15,672,0.04949238578680203,0.07868020304568528,-23,False,False,False,context signal is not specific under null controls
+GSE202623_LESION,reference_profile_learned_neighborhood,2485,136,534,282,1533,0.05472837022132797,0.21488933601609658,-398,True,False,False,learned neighborhood beats marker and null controls
+SQUIDPY_IMC,reference_profile_learned_neighborhood,1744,120,120,246,1258,0.06880733944954129,0.06880733944954129,0,False,False,False,context signal is not specific under null controls
+SQUIDPY_MERFISH,reference_profile_learned_neighborhood,4030,170,438,277,3145,0.04218362282878412,0.1086848635235732,-268,False,False,False,context signal is not specific under null controls
+SQUIDPY_MIBITOF,reference_profile_learned_neighborhood,2012,159,200,234,1419,0.07902584493041749,0.09940357852882704,-41,False,False,False,context signal is not specific under null controls
+SQUIDPY_SEQFISH,reference_profile_learned_neighborhood,5389,516,838,570,3465,0.09575060308034886,0.1555019484134348,-322,True,True,False,learned neighborhood beats marker and null controls
+SQUIDPY_SLIDESEQV2,reference_profile_learned_neighborhood,2800,258,491,862,1189,0.09214285714285714,0.17535714285714285,-233,False,False,False,context signal is not specific under null controls
+SQUIDPY_VISIUM_FLUO,reference_profile_learned_neighborhood,2753,257,346,406,1744,0.09335270613875772,0.12568107519070104,-89,False,True,False,simple spatial smoothing beats marker and random smoothing
+SQUIDPY_VISIUM_HNE,reference_profile_learned_neighborhood,2688,458,204,283,1743,0.17038690476190477,0.07589285714285714,254,False,False,False,context signal is not specific under null controls
+GEO_GSE240015_VISIUM_THYMUS_DOMAIN,marker_context_specific_neighborhood,3910,32,57,82,3739,0.008184143222506393,0.014578005115089514,-25,False,True,False,simple spatial smoothing beats marker and random smoothing
+GEO_GSE284005_MERSCOPE_MS,marker_context_specific_neighborhood,9393,170,156,347,8720,0.01809858405195358,0.01660811242414564,14,False,False,False,context signal is not specific under null controls
+GEO_GSE327581_COSMX_AD_BRAIN,marker_context_specific_neighborhood,5500,144,88,296,4972,0.02618181818181818,0.016,56,True,False,False,learned neighborhood beats marker and null controls
+GEO_GSE333737_MERSCOPE_PANCREAS_VASCULAR,marker_context_specific_neighborhood,2400,11,15,6,2368,0.004583333333333333,0.00625,-4,False,False,False,context signal is not specific under null controls
+GSE202623_LESION,marker_context_specific_neighborhood,2485,32,22,60,2371,0.012877263581488933,0.008853118712273641,10,True,False,False,learned neighborhood beats marker and null controls
+SQUIDPY_IMC,marker_context_specific_neighborhood,1744,41,23,48,1632,0.023509174311926607,0.013188073394495414,18,False,False,False,context signal is not specific under null controls
+SQUIDPY_MERFISH,marker_context_specific_neighborhood,4030,33,21,25,3951,0.008188585607940446,0.005210918114143921,12,False,False,False,context signal is not specific under null controls
+SQUIDPY_MIBITOF,marker_context_specific_neighborhood,2012,25,36,47,1904,0.01242544731610338,0.017892644135188866,-11,False,False,False,context signal is not specific under null controls
+SQUIDPY_SEQFISH,marker_context_specific_neighborhood,5389,48,29,61,5251,0.008907032844683615,0.005381332343663017,19,True,True,False,learned neighborhood beats marker and null controls
+SQUIDPY_SLIDESEQV2,marker_context_specific_neighborhood,2800,27,22,90,2661,0.009642857142857142,0.007857142857142858,5,False,False,False,context signal is not specific under null controls
+SQUIDPY_VISIUM_FLUO,marker_context_specific_neighborhood,2753,46,20,36,2651,0.01670904467853251,0.00726480203414457,26,False,True,False,simple spatial smoothing beats marker and random smoothing
+SQUIDPY_VISIUM_HNE,marker_context_specific_neighborhood,2688,195,112,99,2282,0.07254464285714286,0.041666666666666664,83,False,False,False,context signal is not specific under null controls
