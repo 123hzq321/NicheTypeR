@@ -18,6 +18,7 @@
 \alias{score_lr_context}
 \alias{score_markers}
 \alias{score_context_specific_neighborhood}
+\alias{score_context_specific_annotation}
 \alias{score_external_labels}
 \alias{score_external_matrix}
 \alias{score_neighborhood}
@@ -35,7 +36,8 @@
 \description{
 Core functions for a prototype context-aware cell type annotation workflow.
 The package combines marker, reference, pathway or metabolic program, spatial
-niche, and ligand-receptor evidence into interpretable cell type calls.
+niche, and ligand-receptor evidence into interpretable cell type calls and
+null-corrected context-specific annotation evidence.
 }
 \usage{
 simulate_nichetype_data(n_per_type = 60, seed = 1)
@@ -84,6 +86,12 @@ score_context_specific_neighborhood(edges, prior_scores, niche_db,
   null_edges = NULL, null_niche_db = NULL, statistic = c("residual", "z"),
   temperature = 1, min_null_sd = 1e-6)
 
+score_context_specific_annotation(candidate_scores, context_scores,
+  null_scores, candidate_labels = NULL, weights = NULL,
+  statistic = c("residual", "z"), standardize = FALSE,
+  support_threshold = 0, min_context_margin = 0.05,
+  conflict_delta = 0.1, min_null_sd = 1e-6)
+
 score_spatial_smoothing(edges, prior_scores, alpha = 0.5,
   temperature = 1, return_log = TRUE)
 
@@ -97,8 +105,9 @@ infer_context_type(scores, weights = NULL, temperature = 1,
 
 run_nichetype_workflow(expr, coords, marker_db, metadata = NULL,
   reference_profiles = NULL, pathway_sets = NULL, label_pathways = NULL,
-  niche_db = NULL, lr_db = NULL, k = 8, radius = NULL, weights = NULL,
-  graph_group_col = NULL, temperature = 1, min_margin = 0.08)
+  niche_db = NULL, lr_db = NULL, k = 8, radius = NULL,
+  graph_group_col = NULL, weights = NULL, temperature = 1,
+  min_margin = 0.08, component_min_margin = 0.05)
 
 evaluate_calls(calls, truth)
 
@@ -137,7 +146,8 @@ plot_spatial_calls(coords, calls)
 \item{n_boot}{Number of bootstrap resamples.}
 \item{train_cells}{Optional training cell IDs used for learning spatial
 compatibility.}
-\item{candidate_labels}{Optional label universe for learned niche priors.}
+\item{candidate_labels}{Optional label universe or candidate label vector,
+depending on the function.}
 \item{pseudocount}{Additive smoothing for learned label-label counts.}
 \item{clip}{Optional absolute cap for learned weights.}
 \item{min_cells}{Minimum cells required per reference label.}
@@ -158,8 +168,12 @@ is supplied.}
 \item{background_score}{Score assigned to non-predicted labels.}
 \item{unknown_labels}{External labels treated as unassigned.}
 \item{score_matrix}{External cell-by-label score matrix.}
+\item{cells}{Optional cell IDs to retain or add when aligning an external
+score matrix.}
 \item{fill_missing}{Score used for missing cells or labels.}
 \item{external_scores}{External cell-by-label score matrix to audit.}
+\item{...}{Additional named NicheTypeR evidence matrices supplied to
+\code{audit_external_annotation}.}
 \item{reference_name}{Evidence name assigned to external scores.}
 \item{method}{Method argument for the relevant function, such as correlation
 method for reference similarity or weighting method for learned niche priors.}
@@ -172,6 +186,19 @@ method for reference similarity or weighting method for learned niche priors.}
 \item{null_niche_db}{Optional permuted niche prior or list of permuted niche
 priors.}
 \item{statistic}{Null-corrected context statistic: residual or z-score.}
+\item{candidate_scores}{Cell-by-label candidate annotation score matrix used
+as the label proposal to audit.}
+\item{context_scores}{Observed context evidence matrix or named list of
+cell-by-label evidence matrices.}
+\item{null_scores}{List of null context score matrices or named evidence lists.}
+\item{standardize}{Whether to robust-standardize context evidence matrices
+before fusion.}
+\item{support_threshold}{Minimum context-specific annotation evidence required
+before a candidate label is called supported.}
+\item{min_context_margin}{Minimum top-vs-second context-specific margin for a
+supported candidate label.}
+\item{conflict_delta}{Minimum best-context minus candidate-context score gap
+required to mark a candidate as context-conflicting.}
 \item{min_null_sd}{Minimum null standard deviation for z-scores.}
 \item{alpha}{Weight assigned to the neighborhood average for spatial smoothing.}
 \item{return_log}{Whether spatial smoothing functions return log-probability

@@ -3,3 +3,8 @@
 ^LICENSE[.]md$
 ^[.]github$
 ^[.]gitignore$
+^[.][.]Rcheck$
+^inst/benchmarks/.*[.]csv$
+^inst/benchmarks/.*[.]csv[.]gz$
+^inst/benchmarks/.*[.]json$
+^inst/benchmarks/.*[.]png$

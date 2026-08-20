@@ -1,0 +1,69 @@
+model,accuracy,macro_f1,cells,labels,dataset
+marker_only,0.31823461091753774,0.29735532557323174,861,11,seqFISH+ cortex/SVZ
+logreg_only,0.6910569105691057,0.5471769355677363,861,11,seqFISH+ cortex/SVZ
+linear_svm,0.6260162601626016,0.4830757196130442,861,11,seqFISH+ cortex/SVZ
+pca_knn,0.6829268292682927,0.5028073177039573,861,11,seqFISH+ cortex/SVZ
+extra_trees,0.6922183507549361,0.5447312422776073,861,11,seqFISH+ cortex/SVZ
+singler_native,0.7177700348432056,0.5337431844024537,861,11,seqFISH+ cortex/SVZ
+spatial_smoothing,0.29500580720092917,0.2680675041795005,861,11,seqFISH+ cortex/SVZ
+spatial_smoothing_random_graph,0.2857142857142857,0.27401004001312734,861,11,seqFISH+ cortex/SVZ
+learned_neighborhood,0.26364692218350755,0.26409515505393877,861,11,seqFISH+ cortex/SVZ
+learned_random_graph,0.28339140534262486,0.2815269765379092,861,11,seqFISH+ cortex/SVZ
+learned_permuted_prior,0.289198606271777,0.2812725852895506,861,11,seqFISH+ cortex/SVZ
+context_specific,0.2787456445993031,0.27623837826846914,861,11,seqFISH+ cortex/SVZ
+gated_spatial_smoothing,0.3077816492450639,0.28463398917654353,861,11,seqFISH+ cortex/SVZ
+gated_spatial_smoothing_random_graph,0.305458768873403,0.2884925405238077,861,11,seqFISH+ cortex/SVZ
+gated_learned_neighborhood,0.29965156794425085,0.28714079635061474,861,11,seqFISH+ cortex/SVZ
+gated_learned_random_graph,0.30197444831591175,0.29415289699412545,861,11,seqFISH+ cortex/SVZ
+gated_learned_permuted_prior,0.3124274099883856,0.29873614361191975,861,11,seqFISH+ cortex/SVZ
+gated_context_specific,0.30662020905923343,0.2916610583636111,861,11,seqFISH+ cortex/SVZ
+logreg_learned_neighborhood,0.3426248548199768,0.31724995617637264,861,11,seqFISH+ cortex/SVZ
+logreg_learned_random_graph,0.3321718931475029,0.3242826018351953,861,11,seqFISH+ cortex/SVZ
+logreg_learned_permuted_prior,0.305458768873403,0.2874772816159686,861,11,seqFISH+ cortex/SVZ
+logreg_context_specific,0.3147502903600465,0.3152796233820166,861,11,seqFISH+ cortex/SVZ
+gated_logreg_learned_neighborhood,0.37282229965156793,0.34129028285149954,861,11,seqFISH+ cortex/SVZ
+gated_logreg_learned_random_graph,0.37630662020905925,0.3479303661995707,861,11,seqFISH+ cortex/SVZ
+gated_logreg_learned_permuted_prior,0.3704994192799071,0.3384051354508155,861,11,seqFISH+ cortex/SVZ
+gated_logreg_context_specific,0.3786295005807201,0.35594881086613017,861,11,seqFISH+ cortex/SVZ
+nested_logreg_learned_neighborhood,0.6910569105691057,0.5471769355677363,861,11,seqFISH+ cortex/SVZ
+nested_logreg_learned_random_graph,0.6910569105691057,0.5471769355677363,861,11,seqFISH+ cortex/SVZ
+nested_logreg_learned_permuted_prior,0.6910569105691057,0.5471769355677363,861,11,seqFISH+ cortex/SVZ
+nested_logreg_context_specific,0.6910569105691057,0.5471769355677363,861,11,seqFISH+ cortex/SVZ
+nested_gated_logreg_learned_neighborhood,0.6910569105691057,0.5471769355677363,861,11,seqFISH+ cortex/SVZ
+nested_gated_logreg_learned_random_graph,0.6910569105691057,0.5471769355677363,861,11,seqFISH+ cortex/SVZ
+nested_gated_logreg_learned_permuted_prior,0.6910569105691057,0.5471769355677363,861,11,seqFISH+ cortex/SVZ
+nested_gated_logreg_context_specific,0.6910569105691057,0.5471769355677363,861,11,seqFISH+ cortex/SVZ
+marker_only,0.3637709772951629,0.38088443883107365,2026,8,seqFISH+ olfactory bulb
+logreg_only,0.6855873642645607,0.7680179404576548,2026,8,seqFISH+ olfactory bulb
+linear_svm,0.6638696939782823,0.6838888203424596,2026,8,seqFISH+ olfactory bulb
+pca_knn,0.7537018756169793,0.7611769796394423,2026,8,seqFISH+ olfactory bulb
+extra_trees,0.7847976307996052,0.8007384848006909,2026,8,seqFISH+ olfactory bulb
+singler_native,0.7245804540967423,0.7547491925454913,2026,8,seqFISH+ olfactory bulb
+spatial_smoothing,0.3474827245804541,0.3813164760128142,2026,8,seqFISH+ olfactory bulb
+spatial_smoothing_random_graph,0.33711747285291216,0.365853065793717,2026,8,seqFISH+ olfactory bulb
+learned_neighborhood,0.3070088845014807,0.32943164880627507,2026,8,seqFISH+ olfactory bulb
+learned_random_graph,0.3089832181638697,0.32582862180502636,2026,8,seqFISH+ olfactory bulb
+learned_permuted_prior,0.3302073050345508,0.34556432549090577,2026,8,seqFISH+ olfactory bulb
+context_specific,0.32181638696939785,0.3446297787384901,2026,8,seqFISH+ olfactory bulb
+gated_spatial_smoothing,0.35735439289239884,0.3819166197437168,2026,8,seqFISH+ olfactory bulb
+gated_spatial_smoothing_random_graph,0.34995064165844025,0.3741294967027629,2026,8,seqFISH+ olfactory bulb
+gated_learned_neighborhood,0.34501480750246794,0.36596177917181094,2026,8,seqFISH+ olfactory bulb
+gated_learned_random_graph,0.3464955577492596,0.36521315844333013,2026,8,seqFISH+ olfactory bulb
+gated_learned_permuted_prior,0.3568608094768016,0.375826831191719,2026,8,seqFISH+ olfactory bulb
+gated_context_specific,0.3489634748272458,0.3700625265476374,2026,8,seqFISH+ olfactory bulb
+logreg_learned_neighborhood,0.3874629812438302,0.38271812503712876,2026,8,seqFISH+ olfactory bulb
+logreg_learned_random_graph,0.3474827245804541,0.33780615626906224,2026,8,seqFISH+ olfactory bulb
+logreg_learned_permuted_prior,0.3425468904244817,0.33156129666561146,2026,8,seqFISH+ olfactory bulb
+logreg_context_specific,0.35636722606120436,0.35654625151935765,2026,8,seqFISH+ olfactory bulb
+gated_logreg_learned_neighborhood,0.43237907206317866,0.4220929057311795,2026,8,seqFISH+ olfactory bulb
+gated_logreg_learned_random_graph,0.4220138203356367,0.41450481964510766,2026,8,seqFISH+ olfactory bulb
+gated_logreg_learned_permuted_prior,0.42744323790720634,0.4129717191574358,2026,8,seqFISH+ olfactory bulb
+gated_logreg_context_specific,0.42843040473840077,0.41428648486693176,2026,8,seqFISH+ olfactory bulb
+nested_logreg_learned_neighborhood,0.6855873642645607,0.7680179404576548,2026,8,seqFISH+ olfactory bulb
+nested_logreg_learned_random_graph,0.6855873642645607,0.7680179404576548,2026,8,seqFISH+ olfactory bulb
+nested_logreg_learned_permuted_prior,0.6855873642645607,0.7680179404576548,2026,8,seqFISH+ olfactory bulb
+nested_logreg_context_specific,0.6855873642645607,0.7680179404576548,2026,8,seqFISH+ olfactory bulb
+nested_gated_logreg_learned_neighborhood,0.6855873642645607,0.7680179404576548,2026,8,seqFISH+ olfactory bulb
+nested_gated_logreg_learned_random_graph,0.6855873642645607,0.7680179404576548,2026,8,seqFISH+ olfactory bulb
+nested_gated_logreg_learned_permuted_prior,0.6855873642645607,0.7680179404576548,2026,8,seqFISH+ olfactory bulb
+nested_gated_logreg_context_specific,0.6855873642645607,0.7680179404576548,2026,8,seqFISH+ olfactory bulb

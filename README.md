@@ -52,6 +52,13 @@ publication framing is a Bioinformatics-style Application Note: an auditable
 software framework with conservative benchmarking, not a universal
 state-of-the-art cell type classifier.
 
+The current benchmark snapshot distinguishes biological source datasets from
+analysis configurations: 34 completed configurations correspond to 27 source
+datasets, not 34 independent cohorts. Held-out author or curator-provided
+labels are used as reproducible reference labels for discordance detection,
+while audit conflicts remain hypotheses for re-adjudication rather than
+automatic replacements for biological ground truth.
+
 ## Installation
 
 ```r
@@ -165,6 +172,47 @@ head(summarize_evidence_conflicts(audited))
 This is the intended relationship to SingleR-like tools: the external method
 proposes a label, while NicheTypeR reports whether marker, pathway, local niche
 and ligand-receptor evidence support or challenge that proposal.
+
+## Context-Specific Annotation Evidence
+
+The deeper method layer is Context-Specific Annotation Evidence (CSAE). CSAE
+does not ask whether a spatial signal exists. It asks whether the support for a
+candidate label exceeds explicit null explanations such as random spatial
+graphs, permuted niche priors, or shuffled context evidence.
+
+```r
+csae <- score_context_specific_annotation(
+  candidate_scores = external_reference,
+  context_scores = list(
+    marker = result$evidence$marker,
+    pathway = result$evidence$pathway,
+    neighborhood = result$evidence$neighborhood,
+    ligand_receptor = result$evidence$ligand_receptor
+  ),
+  null_scores = list(
+    random_graph = list(
+      marker = result$evidence$marker,
+      pathway = result$evidence$pathway,
+      neighborhood = random_graph_neighborhood,
+      ligand_receptor = result$evidence$ligand_receptor
+    ),
+    permuted_prior = list(
+      marker = result$evidence$marker,
+      pathway = result$evidence$pathway,
+      neighborhood = permuted_prior_neighborhood,
+      ligand_receptor = result$evidence$ligand_receptor
+    )
+  ),
+  weights = c(marker = 1, pathway = 0.5, neighborhood = 0.5, ligand_receptor = 0.5)
+)
+
+head(csae$audit)
+```
+
+The `audit` table reports whether the candidate label is
+`context_supported`, `context_conflict`, `context_not_specific`, or
+`context_ambiguous`. This reframes spatial annotation as falsification and
+calibration rather than another label-transfer vote.
 
 ## Proving the contribution
 
@@ -293,6 +341,7 @@ Benchmark registry and result summaries:
 
 ```text
 inst/benchmarks/BENCHMARK_DATASETS.md
+inst/benchmarks/BENCHMARK_INDEPENDENCE_AND_TRUTH.md
 inst/benchmarks/DATASET_REGISTRY.csv
 inst/benchmarks/MULTIDATASET_BLOCKED_BENCHMARK.md
 inst/benchmarks/RUNTIME_MEMORY_BENCHMARK.md
@@ -321,6 +370,39 @@ This gives a dependency-free reference-style comparator in the same broad
 family as SingleR, Seurat label transfer, CellTypist and scmap, without claiming
 to reimplement those tools.
 
+A separate external-method comparator based on Seurat label transfer is included
+in `inst/benchmarks/SEURAT_LABEL_TRANSFER_BASELINE.md`. It runs blocked
+reference-to-query transfer on the RNA preview panel and reports the same
+`cell_id`/`label`/`confidence` schema that `score_external_labels()` accepts.
+`inst/benchmarks/EXTERNAL_METHOD_BASELINES.md` extends this comparison with
+three blocked algorithmic proxy mappers: SingleR-style Spearman pseudo-bulk
+mapping, scmap-style cosine nearest-neighbor transfer, and CellTypist-style
+logistic classification. These are stress tests of the external-label audit
+interface, not official package runs. In the current workspace, R/Bioconductor
+packages and CellTypist model assets were unavailable, so the report includes an
+explicit official-tool status table for those broad RNA-panel comparisons.
+Across Seurat plus the three proxy families, generic margin risk remained
+informative for external labels: 162,992 external calls yielded AUROC 0.735 and
+AUPRC 0.685 for held-out reference-label discordance; the official Seurat run
+alone reached AUROC 0.823.
+
+`inst/benchmarks/INCREMENTAL_AUDIT_BENCHMARK.md` tests whether current
+NicheTypeR-specific conflict flags add error-detection value beyond raw
+classifier uncertainty. They do not yet: call-level raw margin AUROC is 0.743
+versus 0.738 for margin plus conflict flags, and unique-cell raw margin AUROC is
+0.879 versus 0.859 for the augmented score. This negative result is part of the
+submission snapshot and should be cited when describing the current empirical
+scope.
+
+`inst/benchmarks/spotless_strong_baselines/REPORT.md` adds two official
+Spotless seqFISH+ imaging-derived gold-standard tasks with strong expression
+baselines and native R/Bioconductor SingleR. In leave-one-FOV validation,
+native SingleR reaches 0.718 accuracy and 0.084 spot RMSE on cortex/SVZ, while
+ExtraTrees reaches 0.785 accuracy and native SingleR 0.069 spot RMSE on
+olfactory bulb. Nested logistic-spatial fusion selected positive spatial weight
+in 0 of 56 fold/family selections, so the accepted nested spatial models revert
+to logistic-only.
+
 The audit case-study summary in
 `inst/benchmarks/ANNOTATION_AUDIT_CASE_STUDY.md` reports per-cell events where
 context or reference evidence rescues a marker-only error, harms a correct
@@ -336,6 +418,35 @@ simple spatial smoothing, not learned neighborhood. Most datasets either show no
 specific context gain or are better explained by generic spatial smoothing/domain
 structure. This strengthens the audit-framework claim but does not support a
 state-of-the-art classifier claim.
+
+The biological audit casebook in
+`inst/benchmarks/BIOLOGICAL_AUDIT_CASEBOOK.md` converts audit flags into
+reviewable annotation problems. In the current snapshot, 256,941 predictions
+were audit-flagged and 153,847 were discordant with held-out reference labels,
+representing 29,480 unique cells or spots after duplicate model calls were
+removed. The prioritized 300-event table includes local-neighborhood
+summaries so users can inspect whether the predicted label is spatially
+plausible. This is retrospective evidence for annotation triage, not a
+prospective pathology re-annotation experiment.
+
+The expanded-scale stress test now covers 22 configurations and 591,155 cells or
+spots. In that larger setting, learned neighborhood passes the strict matched
+null guardrail in two expanded configurations, including the GSE327581 CosMx AD
+brain expansion and GSE263450 generic H5AD expansion; the context-specific
+residual does not pass in any expanded configuration.
+
+For label-level audit granularity, `inst/benchmarks/LABEL_TASK_BENCHMARK.md`
+summarizes 663 dataset-label validation tasks across the 12 preview and 22
+expanded benchmark configurations. Learned-neighborhood evidence improves over
+marker-only in 225 tasks, harms 95 tasks and passes matched label-level
+guardrails in 72 tasks. These are label-level audit tasks, not independent
+cohort counts.
+
+`inst/benchmarks/FOLD_LABEL_TASK_BENCHMARK.md` further decomposes predictions
+into 2,204 eligible fold-label validation tasks with at least 10 held-out cells
+or spots per label. Learned-neighborhood evidence passes fold-level guardrails
+in 302 tasks, and 47 dataset-label tasks are reproducible across at least two
+held-out folds.
 
 The package also includes an initial null-corrected context-specific score:
 
@@ -367,7 +478,7 @@ available.
 
 - `cell_id`: cell barcode or ID
 - `label`: fused context-aware cell type call
-- `confidence`: softmax probability of the top label
+- `confidence`: uncalibrated softmax-derived score of the top label
 - `margin`: confidence gap between the top two labels
 - `conflict_reason`: evidence sources that disagree with the final call
 

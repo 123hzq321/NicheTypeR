@@ -1,0 +1,4 @@
+scale,n_dataset_label_tasks_with_eligible_folds,learned_reproducible_tasks,context_reproducible_tasks,median_eligible_folds,median_learned_guardrail_folds,median_context_guardrail_folds
+all,407,37,8,3.0,0.0,0.0
+expanded,191,8,5,3.0,0.0,0.0
+preview,216,29,3,5.0,1.0,0.0

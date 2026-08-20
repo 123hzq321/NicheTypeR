@@ -1,0 +1,4 @@
+scale,n_label_tasks,n_dataset_configs,total_support,median_support,learned_improved_tasks,learned_harmed_tasks,learned_guardrail_tasks,context_improved_tasks,context_harmed_tasks,context_guardrail_tasks,smoothing_guardrail_tasks,median_learned_delta_vs_marker,median_context_delta_vs_marker
+all,408,19,265720,300.0,127,73,57,102,64,15,42,0.0028142374708614026,0.0016968325791856254
+expanded,191,7,220616,944.0,50,29,12,39,27,5,0,0.0030283136662124788,0.0006328926159231973
+preview,217,12,45104,200.0,77,44,45,63,37,10,42,0.00217437152649079,0.0023779380972861197

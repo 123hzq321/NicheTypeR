@@ -1,12 +1,14 @@
 Package: NicheTypeR
 Title: Context-Aware Annotation Auditing for Spatial Transcriptomics
-Version: 0.0.4
+Version: 0.0.5
 Authors@R: c(
     person("Zhequan", "Hu", role = "aut",
            email = "s2024003064@student.pumc.edu.cn"),
     person("Xingang", "Bi", role = c("aut", "cre"),
            email = "bixingang@csco.org.cn")
   )
+Author: Zhequan Hu [aut], Xingang Bi [aut, cre]
+Maintainer: Xingang Bi <bixingang@csco.org.cn>
 Description: Provides an interpretable evidence-fusion framework for auditing
     cell type annotations in spatial transcriptomics. Candidate labels from
     marker genes or reference mapping can be checked against pathway activity,

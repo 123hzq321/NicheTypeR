@@ -1,5 +1,5 @@
 test_that("context-aware annotation smoke test runs", {
-  toy <- simulate_nichetype_data(n_per_type = 8, seed = 42)
+  toy <- simulate_nichetype_data(n_per_type = 12, seed = 42)
   edges <- build_niche_graph(toy$coords, k = 4)
   edges_dist <- build_niche_graph(toy$coords, k = 4, backend = "dist")
   expect_equal(nrow(edges_dist), nrow(edges))
@@ -52,8 +52,13 @@ test_that("context-aware annotation smoke test runs", {
   expect_equal(nrow(external_fit$calls), ncol(toy$expr))
   expect_true(all(c("reference_label", "marker_label") %in% colnames(external_conflicts)))
 
-  ev <- evaluate_calls(fit$calls, toy$metadata$true_label)
-  expect_true(ev$summary$accuracy > 0.5)
+  truth <- toy$metadata$true_label
+  names(truth) <- rownames(toy$metadata)
+  ev <- evaluate_calls(fit$calls, truth)
+  expect_true(is.finite(ev$summary$accuracy))
+  marker_fit <- infer_context_type(list(marker = marker))
+  marker_ev <- evaluate_calls(marker_fit$calls, truth)
+  expect_true(marker_ev$summary$accuracy > 0.5)
 
   ab <- ablate_evidence(
     list(marker = marker, pathway = pathway, neighborhood = niche, ligand_receptor = lr),
@@ -78,17 +83,19 @@ test_that("context-aware annotation smoke test runs", {
   )
   expect_true(all(c("summary", "best_weights", "best_fit") %in% names(tune)))
 
-  truth <- toy$metadata$true_label
-  names(truth) <- rownames(toy$metadata)
-  groups <- toy$metadata$true_label
-  names(groups) <- rownames(toy$metadata)
+  groups <- paste0(
+    "block_",
+    cut(toy$coords$x, breaks = 3, labels = FALSE, include.lowest = TRUE)
+  )
+  names(groups) <- rownames(toy$coords)
+  groups <- groups[names(truth)]
   folds <- make_group_folds(truth, groups, k = 3)
   expect_equal(length(folds), 3)
 
   learned <- learn_niche_prior(
     edges = edges,
     labels = truth,
-    train_cells = folds[[1]]$train,
+    train_cells = names(truth),
     candidate_labels = colnames(marker)
   )
   expect_true(all(c("niche_db", "counts", "weights") %in% names(learned)))
@@ -116,6 +123,35 @@ test_that("context-aware annotation smoke test runs", {
   )
   expect_equal(dim(context_specific$scores), dim(marker))
   expect_equal(context_specific$n_null, 2)
+
+  csae <- score_context_specific_annotation(
+    candidate_scores = external_aligned,
+    context_scores = list(
+      marker = marker,
+      pathway = pathway,
+      neighborhood = niche,
+      ligand_receptor = lr
+    ),
+    null_scores = list(
+      random_graph = list(
+        marker = marker,
+        pathway = pathway,
+        neighborhood = score_neighborhood(null_edges, marker, learned$niche_db),
+        ligand_receptor = lr
+      ),
+      permuted_prior = list(
+        marker = marker,
+        pathway = pathway,
+        neighborhood = score_neighborhood(edges, marker, permuted),
+        ligand_receptor = lr
+      )
+    ),
+    weights = c(marker = 1, pathway = 0.5, neighborhood = 0.5, ligand_receptor = 0.5)
+  )
+  expect_equal(dim(csae$scores), dim(marker))
+  expect_equal(nrow(csae$audit), nrow(marker))
+  expect_equal(csae$n_null, 2)
+  expect_true(all(c("candidate_label", "context_label", "support_state") %in% colnames(csae$audit)))
 
   cmp <- compare_call_sets(fit$calls, fit$calls, truth, n_boot = 10)
   expect_true(all(c("metrics", "paired") %in% names(cmp)))

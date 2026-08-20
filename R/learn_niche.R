@@ -35,7 +35,9 @@ learn_niche_prior <- function(edges,
   if (is.null(names(labels))) {
     stop("`labels` must be a named vector keyed by cell ID.", call. = FALSE)
   }
+  label_names <- names(labels)
   labels <- as.character(labels)
+  names(labels) <- label_names
   labels <- labels[!is.na(labels)]
   if (is.null(candidate_labels)) {
     candidate_labels <- sort(unique(labels))

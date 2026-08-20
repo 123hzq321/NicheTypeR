@@ -1,0 +1,7 @@
+accession,n_files_scanned,expression_like_detected,coordinate_columns_detected,label_like_columns_detected,usable_label_columns_detected,likely_benchmark_ready,blocker,top_label_candidates
+GSE300613,9,True,4,0,0,False,no usable supervised label/domain column detected,
+GSE282124,5,True,6,0,0,False,no usable supervised label/domain column detected,
+GSE303162,8,True,0,0,0,False,no coordinate-like columns detected,
+GSE305735,3,False,0,0,0,False,no expression-like file detected,
+GSE325911,150,True,74,0,0,False,no usable supervised label/domain column detected,
+GSE278614,2,False,0,1,1,False,no expression-like file detected,GSE278614_summary.txt.gz:# Example of a matrix table for a single channel (non-Affymetrix) submission including platform annotation (header 1-header 3). Only column headers are shown.(7)
