@@ -1,0 +1,7 @@
+scale,evidence_layer,n_dataset_configs,strict_support,directional_support,no_directional_support
+all,learned_neighborhood,19,4,4,11
+all,context_residual,19,0,1,18
+expanded,learned_neighborhood,7,1,1,5
+expanded,context_residual,7,0,1,6
+preview,learned_neighborhood,12,3,3,6
+preview,context_residual,12,0,0,12

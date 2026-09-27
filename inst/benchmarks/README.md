@@ -36,12 +36,13 @@ The expanded-scale stress-test snapshot is:
 - `EXPANDED_SCALE_LEAN_BENCHMARK_per_label.csv`
 
 The current expanded-scale run covers 22 configurations and 591,155 cells or
-spots. Learned-neighborhood evidence passes the matched null guardrail in 2 of
-22 expanded configurations; the context-specific residual passes in 0 of 22.
-Across the complete snapshot, 34 configurations correspond to 27 source
-datasets. `BENCHMARK_INDEPENDENCE_AND_TRUTH.md` records this independence
-accounting and explains that held-out author or curator-provided labels are reproducible
-reference labels rather than flawless biological ground truth.
+spots. Strict dataset-level guardrails remain the primary generalization
+analysis, while threshold-sensitivity files report how much support is strict,
+directional or label-specific. Across the complete snapshot, 34 configurations
+correspond to 27 source datasets. `BENCHMARK_INDEPENDENCE_AND_TRUTH.md` records
+this independence accounting and explains that held-out author or
+curator-provided labels are reproducible reference labels rather than flawless
+biological ground truth.
 
 The label-task audit snapshot is:
 
@@ -53,6 +54,23 @@ The label-task audit snapshot is:
 It summarizes 663 dataset-label validation tasks across the preview and
 expanded benchmark configurations. These tasks increase audit granularity but
 are not counted as independent datasets.
+
+The threshold-sensitivity and tiered-support snapshot is:
+
+- `THRESHOLD_SENSITIVITY_AND_TIERS.md`
+- `THRESHOLD_SENSITIVITY_dataset_level.csv`
+- `THRESHOLD_SENSITIVITY_dataset_tiers.csv`
+- `THRESHOLD_SENSITIVITY_label_tasks.csv`
+- `THRESHOLD_SENSITIVITY_label_task_tiers.csv`
+- `figure_threshold_sensitivity.svg`
+- `figure_threshold_sensitivity.eps`
+
+It keeps the strict dataset-level result as the primary claim, but adds
+exploratory sensitivity summaries. At the directional dataset-level cutoff
+\(\Delta>0\), learned-neighborhood evidence is positive in 14 of 34
+configurations and CSAE residual evidence is positive in 2 of 34. At
+dataset-label resolution, learned-neighborhood evidence is positive in 231 of
+663 tasks and CSAE residual evidence is positive in 123 of 663.
 
 The fold-label stability audit is:
 
