@@ -1,13 +1,8 @@
 NicheTypeR reproducibility environment
 Generated: 2026-09-28 Asia/Shanghai
+Package snapshot: 0.0.7
 
 R package environment
-During startup - Warning messages:
-1: Setting LC_COLLATE=C.UTF-8 failed 
-2: Setting LC_CTYPE=C.UTF-8 failed 
-3: Setting LC_MONETARY=C.UTF-8 failed 
-4: Setting LC_TIME=C.UTF-8 failed 
-
 R version 4.3.3 (2024-02-29 ucrt)
 Platform: x86_64-w64-mingw32/x64 (64-bit)
 Running under: Windows 11 x64 (build 26200)
@@ -16,26 +11,30 @@ Matrix products: default
 
 
 locale:
-[1] C
-system code page: 65001
+[1] LC_COLLATE=English_United States.utf8
+[2] LC_CTYPE=English_United States.utf8
+[3] LC_MONETARY=English_United States.utf8
+[4] LC_NUMERIC=C
+[5] LC_TIME=English_United States.utf8
 
 time zone: Asia/Shanghai
 tzcode source: internal
 
 attached base packages:
-[1] stats     graphics  grDevices utils     datasets  methods   base     
+[1] stats     graphics  grDevices utils     datasets  methods   base
 
 loaded via a namespace (and not attached):
 [1] compiler_4.3.3
-                     Package                Version 
-testthat             "testthat"             "3.2.3" 
-SingleR              "SingleR"              "2.4.1" 
-Seurat               "Seurat"               "5.5.1" 
-SummarizedExperiment "SummarizedExperiment" "1.32.0"
 
+Selected package versions
+testthat 3.2.3
+SingleR 2.4.1
+Seurat not installed
+SummarizedExperiment 1.32.0
+SpatialExperiment not installed
 
 Python benchmark environment
-Python 3.10.11 (tags/v3.10.11:7d4cc5a, Apr  5 2023, 00:38:17) [MSC v.1929 64 bit (AMD64)]
+3.10.11 (tags/v3.10.11:7d4cc5a, Apr  5 2023, 00:38:17) [MSC v.1929 64 bit (AMD64)]
 Platform Windows-10-10.0.26200-SP0
 numpy 2.2.6
 pandas 2.2.3

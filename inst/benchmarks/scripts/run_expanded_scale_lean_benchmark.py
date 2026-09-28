@@ -20,8 +20,8 @@ def resolve_path(value: str) -> Path:
     return path if path.is_absolute() else ROOT / path
 
 
-def dataset_configs() -> list[base.BenchmarkDataset]:
-    registry = pd.read_csv(ROOT / "EXPANDED_SCALE_DATASETS.csv")
+def dataset_configs(registry_path: Path | None = None) -> list[base.BenchmarkDataset]:
+    registry = pd.read_csv(registry_path or (ROOT / "EXPANDED_SCALE_DATASETS.csv"))
     configs: list[base.BenchmarkDataset] = []
     for row in registry.itertuples(index=False):
         configs.append(

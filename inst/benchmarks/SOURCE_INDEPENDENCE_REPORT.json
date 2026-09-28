@@ -1,0 +1,10 @@
+{
+  "benchmark_configurations": 68,
+  "public_source_ids": 61,
+  "known_publication_families": 59,
+  "configuration_level_units": 1271329,
+  "source_deduplicated_units": 1239332,
+  "preview_subset_units_excluded_from_source_deduplicated_total": 31997,
+  "sources_with_multiple_configurations": 7,
+  "known_cross_source_publication_family_merges": 2
+}

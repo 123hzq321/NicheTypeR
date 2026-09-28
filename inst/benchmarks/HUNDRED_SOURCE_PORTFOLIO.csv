@@ -1,0 +1,101 @@
+source_dataset_id,publication_family,n_configurations,source_deduplicated_units,panel,claim_role,semantic_truth_status
+GSE202623,GSE202623,2,33760,label_bearing_validation,eligible for task-appropriate validation with label-evidence caveats,"mixed: author, reference-mapped, domain or external annotations"
+GSE240015,GSE240015,1,3910,label_bearing_validation,eligible for task-appropriate validation with label-evidence caveats,"mixed: author, reference-mapped, domain or external annotations"
+GSE245263,GSE245263,1,2158,label_bearing_validation,eligible for task-appropriate validation with label-evidence caveats,"mixed: author, reference-mapped, domain or external annotations"
+GSE263450,GSE263450,1,36521,label_bearing_validation,eligible for task-appropriate validation with label-evidence caveats,"mixed: author, reference-mapped, domain or external annotations"
+GSE273530,GSE273530,1,8976,label_bearing_validation,eligible for task-appropriate validation with label-evidence caveats,"mixed: author, reference-mapped, domain or external annotations"
+GSE273952,GSE273952,1,5000,label_bearing_validation,eligible for task-appropriate validation with label-evidence caveats,"mixed: author, reference-mapped, domain or external annotations"
+GSE278766,GSE278766,1,32011,label_bearing_validation,eligible for task-appropriate validation with label-evidence caveats,"mixed: author, reference-mapped, domain or external annotations"
+GSE279181,GSE279181,1,11677,label_bearing_validation,eligible for task-appropriate validation with label-evidence caveats,"mixed: author, reference-mapped, domain or external annotations"
+GSE280376,GSE280376,1,92321,label_bearing_validation,eligible for task-appropriate validation with label-evidence caveats,"mixed: author, reference-mapped, domain or external annotations"
+GSE282127,GSE282127,1,53108,label_bearing_validation,eligible for task-appropriate validation with label-evidence caveats,"mixed: author, reference-mapped, domain or external annotations"
+GSE284005,GSE284005,2,34350,label_bearing_validation,eligible for task-appropriate validation with label-evidence caveats,"mixed: author, reference-mapped, domain or external annotations"
+GSE291308,GSE291308,1,17655,label_bearing_validation,eligible for task-appropriate validation with label-evidence caveats,"mixed: author, reference-mapped, domain or external annotations"
+GSE292268,GSE292268,1,28166,label_bearing_validation,eligible for task-appropriate validation with label-evidence caveats,"mixed: author, reference-mapped, domain or external annotations"
+GSE294759,GSE294759,1,44137,label_bearing_validation,eligible for task-appropriate validation with label-evidence caveats,"mixed: author, reference-mapped, domain or external annotations"
+GSE301435,GSE301435,1,57937,label_bearing_validation,eligible for task-appropriate validation with label-evidence caveats,"mixed: author, reference-mapped, domain or external annotations"
+GSE302502,GSE302502,1,23570,label_bearing_validation,eligible for task-appropriate validation with label-evidence caveats,"mixed: author, reference-mapped, domain or external annotations"
+GSE305393,GSE305393,1,19039,label_bearing_validation,eligible for task-appropriate validation with label-evidence caveats,"mixed: author, reference-mapped, domain or external annotations"
+GSE307588,GSE307588,1,3713,label_bearing_validation,eligible for task-appropriate validation with label-evidence caveats,"mixed: author, reference-mapped, domain or external annotations"
+GSE308167,GSE308167,1,11775,label_bearing_validation,eligible for task-appropriate validation with label-evidence caveats,"mixed: author, reference-mapped, domain or external annotations"
+GSE308624,GSE308624,1,18032,label_bearing_validation,eligible for task-appropriate validation with label-evidence caveats,"mixed: author, reference-mapped, domain or external annotations"
+GSE308952,GSE308952,1,3720,label_bearing_validation,eligible for task-appropriate validation with label-evidence caveats,"mixed: author, reference-mapped, domain or external annotations"
+GSE310129,GSE310129,1,22522,label_bearing_validation,eligible for task-appropriate validation with label-evidence caveats,"mixed: author, reference-mapped, domain or external annotations"
+GSE311681,GSE311681,1,33574,label_bearing_validation,eligible for task-appropriate validation with label-evidence caveats,"mixed: author, reference-mapped, domain or external annotations"
+GSE317755,GSE317755,1,3188,label_bearing_validation,eligible for task-appropriate validation with label-evidence caveats,"mixed: author, reference-mapped, domain or external annotations"
+GSE325587,GSE325587,1,20386,label_bearing_validation,eligible for task-appropriate validation with label-evidence caveats,"mixed: author, reference-mapped, domain or external annotations"
+GSE326743,GSE326743,1,64284,label_bearing_validation,eligible for task-appropriate validation with label-evidence caveats,"mixed: author, reference-mapped, domain or external annotations"
+GSE327129,GSE327129,1,7303,label_bearing_validation,eligible for task-appropriate validation with label-evidence caveats,"mixed: author, reference-mapped, domain or external annotations"
+GSE327581,GSE327581,2,16371,label_bearing_validation,eligible for task-appropriate validation with label-evidence caveats,"mixed: author, reference-mapped, domain or external annotations"
+GSE328481,GSE328481,1,15000,label_bearing_validation,eligible for task-appropriate validation with label-evidence caveats,"mixed: author, reference-mapped, domain or external annotations"
+GSE330849,GSE330849,1,52701,label_bearing_validation,eligible for task-appropriate validation with label-evidence caveats,"mixed: author, reference-mapped, domain or external annotations"
+GSE333479,GSE333479,1,20448,label_bearing_validation,eligible for task-appropriate validation with label-evidence caveats,"mixed: author, reference-mapped, domain or external annotations"
+GSE333737,GSE333737,2,24222,label_bearing_validation,eligible for task-appropriate validation with label-evidence caveats,"mixed: author, reference-mapped, domain or external annotations"
+GSE336633,GSE336633,1,75580,label_bearing_validation,eligible for task-appropriate validation with label-evidence caveats,"mixed: author, reference-mapped, domain or external annotations"
+GSE337336,GSE337336,1,20000,label_bearing_validation,eligible for task-appropriate validation with label-evidence caveats,"mixed: author, reference-mapped, domain or external annotations"
+SODB:Allen2022Molecular_aging,SODB:Allen2022Molecular,1,8596,label_bearing_validation,eligible for task-appropriate validation with label-evidence caveats,"mixed: author, reference-mapped, domain or external annotations"
+SODB:Allen2022Molecular_lps,SODB:Allen2022Molecular,1,8840,label_bearing_validation,eligible for task-appropriate validation with label-evidence caveats,"mixed: author, reference-mapped, domain or external annotations"
+SODB:Booeshaghi2021Isoform,SODB:Booeshaghi2021Isoform,1,3502,label_bearing_validation,eligible for task-appropriate validation with label-evidence caveats,"mixed: author, reference-mapped, domain or external annotations"
+SODB:Fang2022Conservation,SODB:Fang2022Conservation,1,11648,label_bearing_validation,eligible for task-appropriate validation with label-evidence caveats,"mixed: author, reference-mapped, domain or external annotations"
+SODB:Marshall2022High_human,SODB:Marshall2022High,1,13496,label_bearing_validation,eligible for task-appropriate validation with label-evidence caveats,"mixed: author, reference-mapped, domain or external annotations"
+SODB:Marshall2022High_mouse,SODB:Marshall2022High,1,8746,label_bearing_validation,eligible for task-appropriate validation with label-evidence caveats,"mixed: author, reference-mapped, domain or external annotations"
+SODB:Shi2022Spatial,SODB:Shi2022Spatial,1,11310,label_bearing_validation,eligible for task-appropriate validation with label-evidence caveats,"mixed: author, reference-mapped, domain or external annotations"
+SODB:Sun2021Integrating,SODB:Sun2021Integrating,1,5831,label_bearing_validation,eligible for task-appropriate validation with label-evidence caveats,"mixed: author, reference-mapped, domain or external annotations"
+SODB:Wang2018Three_1k,SODB:Wang2018Three_1k,1,872,label_bearing_validation,eligible for task-appropriate validation with label-evidence caveats,"mixed: author, reference-mapped, domain or external annotations"
+SODB:Wu2022spatial,SODB:Wu2022spatial,1,8102,label_bearing_validation,eligible for task-appropriate validation with label-evidence caveats,"mixed: author, reference-mapped, domain or external annotations"
+SODB:Zeng2023Integrative,SODB:Zeng2023Integrative,1,11199,label_bearing_validation,eligible for task-appropriate validation with label-evidence caveats,"mixed: author, reference-mapped, domain or external annotations"
+SODB:chen2021dissecting,SODB:chen2021dissecting,1,8711,label_bearing_validation,eligible for task-appropriate validation with label-evidence caveats,"mixed: author, reference-mapped, domain or external annotations"
+SODB:chen2022spatiotemporal,SODB:chen2022spatiotemporal,1,18360,label_bearing_validation,eligible for task-appropriate validation with label-evidence caveats,"mixed: author, reference-mapped, domain or external annotations"
+SODB:codeluppi2018spatial,SODB:codeluppi2018spatial,1,5328,label_bearing_validation,eligible for task-appropriate validation with label-evidence caveats,"mixed: author, reference-mapped, domain or external annotations"
+SODB:eng2019transcriptome,SODB:eng2019transcriptome,1,1826,label_bearing_validation,eligible for task-appropriate validation with label-evidence caveats,"mixed: author, reference-mapped, domain or external annotations"
+SODB:he2020integrating,SODB:he2020integrating,1,2000,label_bearing_validation,eligible for task-appropriate validation with label-evidence caveats,"mixed: author, reference-mapped, domain or external annotations"
+SODB:seqFISH_VISp,SODB:seqFISH_VISp,1,2721,label_bearing_validation,eligible for task-appropriate validation with label-evidence caveats,"mixed: author, reference-mapped, domain or external annotations"
+SODB:wang2021easi,SODB:wang2021easi,1,46720,label_bearing_validation,eligible for task-appropriate validation with label-evidence caveats,"mixed: author, reference-mapped, domain or external annotations"
+SODB:wang2022high,SODB:wang2022high,1,8589,label_bearing_validation,eligible for task-appropriate validation with label-evidence caveats,"mixed: author, reference-mapped, domain or external annotations"
+SODB:wei2022single,SODB:wei2022single,1,14710,label_bearing_validation,eligible for task-appropriate validation with label-evidence caveats,"mixed: author, reference-mapped, domain or external annotations"
+SQUIDPY_IMC,SQUIDPY_IMC,1,1744,label_bearing_validation,eligible for task-appropriate validation with label-evidence caveats,"mixed: author, reference-mapped, domain or external annotations"
+SQUIDPY_MERFISH,SQUIDPY_MERFISH,2,73655,label_bearing_validation,eligible for task-appropriate validation with label-evidence caveats,"mixed: author, reference-mapped, domain or external annotations"
+SQUIDPY_MIBITOF,SQUIDPY_MIBITOF,1,2012,label_bearing_validation,eligible for task-appropriate validation with label-evidence caveats,"mixed: author, reference-mapped, domain or external annotations"
+SQUIDPY_SEQFISH,SQUIDPY_SEQFISH,2,19416,label_bearing_validation,eligible for task-appropriate validation with label-evidence caveats,"mixed: author, reference-mapped, domain or external annotations"
+SQUIDPY_SLIDESEQV2,SQUIDPY_SLIDESEQV2,2,18842,label_bearing_validation,eligible for task-appropriate validation with label-evidence caveats,"mixed: author, reference-mapped, domain or external annotations"
+SQUIDPY_VISIUM_FLUO,SQUIDPY_VISIUM_FLUO,1,2753,label_bearing_validation,eligible for task-appropriate validation with label-evidence caveats,"mixed: author, reference-mapped, domain or external annotations"
+SQUIDPY_VISIUM_HNE,SQUIDPY_VISIUM_HNE,1,2688,label_bearing_validation,eligible for task-appropriate validation with label-evidence caveats,"mixed: author, reference-mapped, domain or external annotations"
+SODB:Fu2021Unsupervised,publication-level deduplication not asserted,1,10248,cluster_only_calibration,operational and matched-null calibration only,SODB standardized Leiden cluster; not semantic truth
+SODB:stickels2020highly,publication-level deduplication not asserted,1,9545,cluster_only_calibration,operational and matched-null calibration only,SODB standardized Leiden cluster; not semantic truth
+SODB:Vickovic2019high_update,publication-level deduplication not asserted,1,14064,cluster_only_calibration,operational and matched-null calibration only,SODB standardized Leiden cluster; not semantic truth
+SODB:Biermann2022Dissecting,publication-level deduplication not asserted,1,3563,cluster_only_calibration,operational and matched-null calibration only,SODB standardized Leiden cluster; not semantic truth
+SODB:Borm2022Scalable,publication-level deduplication not asserted,1,6500,cluster_only_calibration,operational and matched-null calibration only,SODB standardized Leiden cluster; not semantic truth
+SODB:chen2021decoding,publication-level deduplication not asserted,1,7288,cluster_only_calibration,operational and matched-null calibration only,SODB standardized Leiden cluster; not semantic truth
+SODB:liu2022spatiotemporal,publication-level deduplication not asserted,1,4670,cluster_only_calibration,operational and matched-null calibration only,SODB standardized Leiden cluster; not semantic truth
+SODB:maynard2021trans,publication-level deduplication not asserted,1,2908,cluster_only_calibration,operational and matched-null calibration only,SODB standardized Leiden cluster; not semantic truth
+SODB:Garcia2021Mapping,publication-level deduplication not asserted,1,2508,cluster_only_calibration,operational and matched-null calibration only,SODB standardized Leiden cluster; not semantic truth
+SODB:Ratz2022Clonal,publication-level deduplication not asserted,1,3264,cluster_only_calibration,operational and matched-null calibration only,SODB standardized Leiden cluster; not semantic truth
+SODB:parigi2022the,publication-level deduplication not asserted,1,3382,cluster_only_calibration,operational and matched-null calibration only,SODB standardized Leiden cluster; not semantic truth
+SODB:rodriques2019slide,publication-level deduplication not asserted,1,3760,cluster_only_calibration,operational and matched-null calibration only,SODB standardized Leiden cluster; not semantic truth
+SODB:Melo2021Integrating,publication-level deduplication not asserted,1,3007,cluster_only_calibration,operational and matched-null calibration only,SODB standardized Leiden cluster; not semantic truth
+SODB:Visium_Allen,publication-level deduplication not asserted,1,2492,cluster_only_calibration,operational and matched-null calibration only,SODB standardized Leiden cluster; not semantic truth
+SODB:Zhang2023Amolecularly_rawcount,publication-level deduplication not asserted,1,3886,cluster_only_calibration,operational and matched-null calibration only,SODB standardized Leiden cluster; not semantic truth
+SODB:fawkner2021spatiotemporal,publication-level deduplication not asserted,1,2448,cluster_only_calibration,operational and matched-null calibration only,SODB standardized Leiden cluster; not semantic truth
+SODB:hunter2021spatially,publication-level deduplication not asserted,1,2393,cluster_only_calibration,operational and matched-null calibration only,SODB standardized Leiden cluster; not semantic truth
+SODB:Juntaro2022MEK,publication-level deduplication not asserted,1,2429,cluster_only_calibration,operational and matched-null calibration only,SODB standardized Leiden cluster; not semantic truth
+SODB:10x,publication-level deduplication not asserted,1,2673,cluster_only_calibration,operational and matched-null calibration only,SODB standardized Leiden cluster; not semantic truth
+SODB:Buzzi2022Spatial,publication-level deduplication not asserted,1,2427,cluster_only_calibration,operational and matched-null calibration only,SODB standardized Leiden cluster; not semantic truth
+SODB:bergenstrahle2021super,publication-level deduplication not asserted,1,2361,cluster_only_calibration,operational and matched-null calibration only,SODB standardized Leiden cluster; not semantic truth
+SODB:Dixon2022Spatially,publication-level deduplication not asserted,1,2219,cluster_only_calibration,operational and matched-null calibration only,SODB standardized Leiden cluster; not semantic truth
+SODB:Barkley2022Cancer,publication-level deduplication not asserted,1,1847,cluster_only_calibration,operational and matched-null calibration only,SODB standardized Leiden cluster; not semantic truth
+SODB:backdahl2021spatial,publication-level deduplication not asserted,1,1597,cluster_only_calibration,operational and matched-null calibration only,SODB standardized Leiden cluster; not semantic truth
+SODB:Pascual2021Dietary,publication-level deduplication not asserted,1,1269,cluster_only_calibration,operational and matched-null calibration only,SODB standardized Leiden cluster; not semantic truth
+SODB:Merfish_Visp,publication-level deduplication not asserted,1,2399,cluster_only_calibration,operational and matched-null calibration only,SODB standardized Leiden cluster; not semantic truth
+SODB:Dhainaut2022Spatial,publication-level deduplication not asserted,1,1244,cluster_only_calibration,operational and matched-null calibration only,SODB standardized Leiden cluster; not semantic truth
+SODB:Kadur2022Human,publication-level deduplication not asserted,1,1167,cluster_only_calibration,operational and matched-null calibration only,SODB standardized Leiden cluster; not semantic truth
+SODB:kvastad2021the,publication-level deduplication not asserted,1,997,cluster_only_calibration,operational and matched-null calibration only,SODB standardized Leiden cluster; not semantic truth
+SODB:Misra2021Characterizing,publication-level deduplication not asserted,1,959,cluster_only_calibration,operational and matched-null calibration only,SODB standardized Leiden cluster; not semantic truth
+SODB:Lebrigand2022The,publication-level deduplication not asserted,1,902,cluster_only_calibration,operational and matched-null calibration only,SODB standardized Leiden cluster; not semantic truth
+SODB:Gouin2021An,publication-level deduplication not asserted,1,814,cluster_only_calibration,operational and matched-null calibration only,SODB standardized Leiden cluster; not semantic truth
+SODB:mantri2021spatiotemporal,publication-level deduplication not asserted,1,747,cluster_only_calibration,operational and matched-null calibration only,SODB standardized Leiden cluster; not semantic truth
+SODB:xia2019spatial,publication-level deduplication not asserted,1,606,cluster_only_calibration,operational and matched-null calibration only,SODB standardized Leiden cluster; not semantic truth
+SODB:ji2020multimodal,publication-level deduplication not asserted,1,608,cluster_only_calibration,operational and matched-null calibration only,SODB standardized Leiden cluster; not semantic truth
+SODB:guilliams2022spatial,publication-level deduplication not asserted,1,532,cluster_only_calibration,operational and matched-null calibration only,SODB standardized Leiden cluster; not semantic truth
+SODB:Konieczny2022Interleukin,publication-level deduplication not asserted,1,505,cluster_only_calibration,operational and matched-null calibration only,SODB standardized Leiden cluster; not semantic truth
+SODB:chen2020spatial,publication-level deduplication not asserted,1,447,cluster_only_calibration,operational and matched-null calibration only,SODB standardized Leiden cluster; not semantic truth
+SODB:berglund2018spatial,publication-level deduplication not asserted,1,469,cluster_only_calibration,operational and matched-null calibration only,SODB standardized Leiden cluster; not semantic truth

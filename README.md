@@ -52,12 +52,14 @@ publication framing is a Bioinformatics-style Application Note: an auditable
 software framework with conservative benchmarking, not a universal
 state-of-the-art cell type classifier.
 
-The current benchmark snapshot distinguishes biological source datasets from
-analysis configurations: 48 completed configurations correspond to 41 source
-datasets, not 48 independent cohorts. Held-out author or curator-provided
-labels are used as reproducible reference labels for discordance detection,
-while audit conflicts remain hypotheses for re-adjudication rather than
-automatic replacements for biological ground truth.
+The current benchmark snapshot uses a tiered 100-source portfolio. Primary
+label-bearing validation contains 61 named public sources represented by 68
+configurations and 1,239,332 source-deduplicated observations. A separate 39
+source panel with repository-standardized Leiden clusters is used only for
+operational and matched-null calibration. The 100-source count is therefore a
+processing-coverage statement, not a claim of 100 independent gold-standard
+cohorts. Held-out author or curator-provided labels remain reference labels for
+discordance detection, while audit conflicts are hypotheses for re-adjudication.
 
 ## Installation
 
@@ -409,15 +411,16 @@ context or reference evidence rescues a marker-only error, harms a correct
 marker-only call, or changes a still-incorrect call. This is the most direct
 evidence for the package's intended role as an annotation-audit layer.
 
-Current cross-dataset result after direct GEO expansion: learned neighborhood
-passes the strict matched-null guardrail in 6 of 48 configurations. The three
-preview passes are GSE202623 lesion MERFISH, Squidpy seqFISH and GSE327581
-CosMx AD brain; the three expanded passes are GSE263450, GSE308952 and the
-expanded GSE327581 benchmark. The null-corrected context-specific residual
-passes in 0 of 48 configurations. Most datasets therefore show no specific
-context gain, or are better explained by generic spatial smoothing/domain
-structure. This supports a selective audit-framework claim but not a
-state-of-the-art classifier claim.
+Current cross-dataset result: learned neighborhood passes the strict
+matched-null guardrail in 9 of 68 label-bearing validation configurations.
+The six expanded passes are GSE263450, GSE308952, expanded GSE327581 and the
+SODB Fang2022Conservation, wang2021easi and Zeng2023Integrative sources. The
+null-corrected context-specific residual passes in 1 of 68 configurations,
+SODB he2020integrating; this is a tumour/non-tumour spatial-domain task rather
+than a cell-type benchmark. Most datasets therefore show no specific context
+gain, or are better explained by generic spatial smoothing/domain structure.
+This supports a selective audit-framework claim, not a state-of-the-art
+classifier claim.
 
 The biological audit casebook in
 `inst/benchmarks/BIOLOGICAL_AUDIT_CASEBOOK.md` converts audit flags into
@@ -429,18 +432,17 @@ summaries so users can inspect whether the predicted label is spatially
 plausible. This is retrospective evidence for annotation triage, not a
 prospective pathology re-annotation experiment.
 
-The expanded-scale stress test now covers 36 configurations and 1,025,118
-cells or spots. In that larger setting, learned neighborhood passes the strict
-matched-null guardrail in three configurations: GSE263450, GSE308952 and the
-GSE327581 CosMx AD brain expansion. The context-specific residual does not pass
-in any expanded configuration.
+The expanded-scale stress test now covers 56 configurations and 1,226,225
+configuration-level cells or spots. Learned neighborhood passes the strict
+matched-null guardrail in 6 configurations and the context-specific residual
+in 1 spatial-domain configuration.
 
 For label-level audit granularity, `inst/benchmarks/LABEL_TASK_BENCHMARK.md`
-summarizes 941 dataset-label validation tasks across the 12 preview and 36
-expanded benchmark configurations. Learned-neighborhood evidence improves over
-marker-only in 263 tasks, harms 133 tasks and passes matched label-level
-guardrails in 83 tasks. These are label-level audit tasks, not independent
-cohort counts.
+summarizes 1,283 dataset-label validation tasks across the 12 preview and 56
+expanded benchmark configurations. Learned-neighborhood evidence has positive
+matched-null specific deltas in 425 tasks and exceeds a 0.01 label-F1 delta in
+139 tasks. CSAE is positive in 209 tasks and exceeds 0.01 in 29. These are
+label-level audit tasks, not independent cohort counts.
 
 `inst/benchmarks/FOLD_LABEL_TASK_BENCHMARK.md` further decomposes predictions
 into 2,984 eligible fold-label validation tasks with at least 10 held-out cells

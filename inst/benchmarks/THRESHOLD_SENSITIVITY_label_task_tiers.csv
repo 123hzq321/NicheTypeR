@@ -1,7 +1,7 @@
 scale,evidence_layer,n_label_tasks,n_eligible_label_tasks,strong_support_delta_gt_0_01,suggestive_support_delta_0_to_0_01,no_gain_or_harm,missing_matched_null_delta
-all,learned_neighborhood,941,941,83,227,631,0
-all,context_residual,941,941,22,145,774,0
-expanded,learned_neighborhood,724,724,38,187,499,0
-expanded,context_residual,724,724,11,102,611,0
+all,learned_neighborhood,1283,1283,139,286,858,0
+all,context_residual,1283,1283,29,180,1074,0
+expanded,learned_neighborhood,1066,1066,94,246,726,0
+expanded,context_residual,1066,1066,18,137,911,0
 preview,learned_neighborhood,217,217,45,40,132,0
 preview,context_residual,217,217,11,43,163,0

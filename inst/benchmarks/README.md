@@ -1,7 +1,7 @@
 # Benchmark Snapshot
 
 This directory contains the benchmark registry, reproducibility scripts and
-summary artifacts used for the NicheTypeR 0.0.6 Bioinformatics submission
+summary artifacts used for the NicheTypeR 0.0.7 Bioinformatics submission
 snapshot (2026-09-28).
 
 The full raw and processed spatial transcriptomics matrices are not bundled in
@@ -36,15 +36,14 @@ The expanded-scale stress-test snapshot is:
 - `EXPANDED_SCALE_LEAN_BENCHMARK_pairwise.csv`
 - `EXPANDED_SCALE_LEAN_BENCHMARK_per_label.csv`
 
-The current expanded-scale run covers 36 configurations and 1,025,118 cells or
-spots. Strict dataset-level guardrails remain the primary generalization
-analysis, while threshold-sensitivity files report how much support is strict,
-directional or label-specific. Across the complete snapshot, 48 configurations
-cover 1,070,222 unique dataset--cell/spot units and correspond to 41 source
-datasets. `BENCHMARK_INDEPENDENCE_AND_TRUTH.md` records
-this independence accounting and explains that held-out author or
-curator-provided labels are reproducible reference labels rather than flawless
-biological ground truth.
+The current expanded-scale run covers 56 configurations and 1,226,225
+configuration-level cells or spots. Across the complete primary snapshot, 68
+configurations correspond to 61 named public sources, 59 known publication
+families and 1,239,332 source-deduplicated observations. A separate 39-source
+cluster-only SODB panel brings processing coverage to 100 source IDs but is
+excluded from the efficacy denominator. `BENCHMARK_INDEPENDENCE_AND_TRUTH.md`
+records this accounting and explains that held-out author or curator-provided
+labels are reproducible reference labels rather than flawless biological truth.
 
 The label-task audit snapshot is:
 
@@ -53,7 +52,7 @@ The label-task audit snapshot is:
 - `LABEL_TASK_BENCHMARK_summary.csv`
 - `LABEL_TASK_BENCHMARK_support_bins.csv`
 
-It summarizes 941 dataset-label validation tasks across the preview and
+It summarizes 1,283 dataset-label validation tasks across the preview and
 expanded benchmark configurations. These tasks increase audit granularity but
 are not counted as independent datasets.
 
@@ -69,11 +68,26 @@ The threshold-sensitivity and tiered-support snapshot is:
 
 It keeps the strict dataset-level result as the primary claim, but adds
 exploratory sensitivity summaries. Learned-neighborhood evidence passes the
-strict guardrail in 6 of 48 configurations and CSAE residual evidence in 0 of
-48. At the directional dataset-level cutoff \(\Delta>0\), the corresponding
-counts are 17 of 48 and 5 of 48. At dataset-label resolution,
-learned-neighborhood evidence is positive in 310 of 941 tasks and CSAE residual
-evidence is positive in 167 of 941.
+strict guardrail in 9 of 68 configurations and CSAE residual evidence in 1 of
+68. The CSAE event is a tumour/non-tumour spatial-domain task rather than a
+cell-type benchmark. At the directional dataset-level cutoff \(\Delta>0\), the
+corresponding counts are 24 of 68 and 7 of 68. At dataset-label resolution,
+learned-neighborhood evidence is positive in 425 of 1,283 tasks and CSAE
+residual evidence is positive in 209 of 1,283.
+
+Source accounting and the 100-source portfolio are:
+
+- `CONFIGURATION_SOURCE_MAP.csv`
+- `SOURCE_INDEPENDENCE_REGISTRY.csv`
+- `SOURCE_INDEPENDENCE_REPORT.md`
+- `HUNDRED_SOURCE_PORTFOLIO.md`
+- `HUNDRED_SOURCE_PORTFOLIO.csv`
+
+The portfolio separates 61 label-bearing validation sources from 39
+cluster-only calibration sources. The latter are reported in
+`SODB_CALIBRATION_LEAN_BENCHMARK.md` and are never added to the primary
+efficacy denominator. The 20 label-bearing SODB configurations are reported in
+`SODB_SCALE_LEAN_BENCHMARK.md`.
 
 The fold-label stability audit is:
 

@@ -5,28 +5,36 @@ independent biological sources, and how held-out labels are interpreted.
 
 ## Independence accounting
 
-The completed performance snapshot contains 48 benchmark configurations, but
-these are not treated as 48 independent cohorts. The biological independence
-unit is the source dataset or source accession.
+The completed primary performance snapshot contains 68 benchmark
+configurations from 61 named public source IDs. These are not treated as 68
+independent cohorts. A source ID is an accession or named repository dataset,
+not an assertion of donor-level independence; publication family, donor,
+slide, FOV and generated spatial block are tracked separately where available.
 
 | Unit | Count | Interpretation |
 |---|---:|---|
-| Source datasets | 41 | primary biological independence unit |
+| Processed public source IDs | 100 | total processing coverage |
+| Label-bearing validation sources | 61 | primary efficacy panel |
+| Known validation publication families | 59 | two known shared-provenance merges |
 | Preview configurations | 12 | compact reproducible matrices used for the main blocked benchmark |
-| Expanded configurations | 36 | larger stress-test views for scale and robustness |
+| Expanded validation configurations | 56 | larger and cross-sample views |
 | Sources with both preview and expanded configurations | 7 | paired analysis views, not independent cohorts |
-| Expanded-only source datasets | 29 | additional independent public sources |
-| Total benchmark configurations | 48 | analysis configurations, not a cohort count |
+| Primary validation configurations | 68 | analysis configurations, not a cohort count |
+| Cluster-only calibration sources/configurations | 39 | operational/null calibration only |
+| All processed configurations | 107 | validation plus calibration |
+| Validation configuration-level observations | 1,271,329 | includes repeated preview views |
+| Source-deduplicated validation observations | 1,239,332 | preview subset removed where expanded view exists |
 
 The seven source datasets represented by both preview and expanded views are:
 GSE202623, GSE333737, GSE284005, GSE327581, SQUIDPY_MERFISH,
 SQUIDPY_SEQFISH and SQUIDPY_SLIDESEQV2.
 
-The expanded-only source datasets are: GSE302502, GSE282127, GSE245263,
-GSE263450, GSE294759, GSE301435, GSE308624, GSE310129, GSE317755, GSE327129,
-GSE328481, GSE330849, GSE325587, GSE273530, GSE273952, GSE337336, GSE307588,
-GSE326743, GSE305393, GSE291308, GSE311681, GSE292268, GSE278766, GSE333479,
-GSE279181, GSE280376, GSE308167, GSE308952 and GSE336633.
+The complete source list, known publication-family merges and source-level unit
+counts are released in `SOURCE_INDEPENDENCE_REGISTRY.csv`. The tiered
+100-source accounting is released in `HUNDRED_SOURCE_PORTFOLIO.csv`. The 39
+calibration sources use SODB-standardized Leiden clusters. They test ingestion,
+blocked execution and matched-null behavior, but do not constitute semantic
+cell-type ground truth and are excluded from all primary efficacy fractions.
 
 ## Reference-label model
 

@@ -1,0 +1,24 @@
+dataset_name,experiment_mode,label_col,task_type,label_evidence,preferred_group_col,include_primary,duplicate_of,note
+Allen2022Molecular_aging,audited_multi3,cell_type,cell_type,author_and_ontology_annotation,fov,yes,,mouse brain aging MERFISH cohort; held out by downloaded specimen
+Allen2022Molecular_lps,audited_multi3,cell_type,cell_type,author_and_ontology_annotation,fov,yes,,mouse brain LPS MERFISH cohort; same publication family as aging cohort
+Booeshaghi2021Isoform,audited_multi3,subclass,cell_type,author_subclass,fovID,yes,,MERSCOPE cortex reanalysis with semantic subclasses; held out by slice
+Fang2022Conservation,audited_multi3,cluster_L2,cell_type,author_hierarchical_cell_cluster,,yes,,human MTG spatial cell classes; held out by specimen
+Marshall2022High_human,audited_multi3,author_cell_type|author_predicted_cell_type,cell_type,author_cell_type,,yes,,human kidney Slide-seqV2; held out by puck
+Marshall2022High_mouse,audited_multi3,author_cell_type,cell_type,author_cell_type,,yes,,mouse kidney Slide-seqV2; held out by puck; same publication family as human cohort
+Shi2022Spatial,audited_multi3,Main_molecular_cell_type,cell_type,author_molecular_cell_type,,yes,,mouse spinal cord and brain spatial molecular atlas; held out by specimen
+Wang2018Three_1k,representative,celltype,cell_type,author_cell_type,,yes,,mouse cortex STARmap
+Wu2022spatial,representative,Annotation,cell_type,author_annotation,Batch,yes,,mouse olfactory-neurogenesis spatial transcriptomics
+Zeng2023Integrative,audited_multi3,ct_top,cell_type,author_cell_type,sample,yes,,mouse disease brain spatial transcriptomics; held out by replicate
+chen2021dissecting,audited_multi3,ct_name,cell_type,author_cell_type,,yes,,human testis spatial transcriptomics; two-slide holdout
+codeluppi2018spatial,representative,ClusterName,cell_type,author_cell_cluster,,yes,,mouse somatosensory cortex osmFISH
+wei2022single,audited_multi3,Celltype|Annotation,cell_type,author_annotation,Batch,yes,,mouse olfactory-bulb development spatial transcriptomics; held out by sample
+wang2021easi,all_small,cell_type,cell_type,author_cell_type,__experiment__,yes,,mouse brain EASI-FISH; combine all small z-step experiments
+eng2019transcriptome,all_small,ct,cell_type,author_cell_type,__experiment__,yes,,mouse cortex seqFISH+; combine labeled cortex FOVs
+he2020integrating,all_small,tumor,spatial_domain,author_tumor_region,__experiment__,yes,,human breast cancer spatial transcriptomics; held out by section
+wang2022high,representative,annotation,spatial_domain,author_tissue_annotation,,yes,,Drosophila embryo Stereo-seq tissue regions
+chen2022spatiotemporal,audited_multi3,annotation,spatial_domain,author_tissue_annotation,,yes,,mouse embryo Stereo-seq tissue regions; held out by section
+Sun2021Integrating,audited_multi3,layer,spatial_domain,author_cortical_layer,,yes,,mouse VISp BaristaSeq cortical layers; held out by slice
+ortiz2020molecular,representative,cluster_name,spatial_domain,author_anatomical_cluster,,yes,,mouse brain spatial anatomical clusters
+seqFISH_VISp,representative,layer,spatial_domain,author_cortical_layer,,yes,,mouse VISp seqFISH cortical layers; source overlap to be checked against Sun2021
+lohoff2021integration,representative,celltype_mapped_refined,cell_type,reference_mapped_cell_type,,no,SQUIDPY_SEQFISH,exact 19416 by 351 source represented by current Squidpy seqFISH benchmark
+moffitt2018molecular,representative,Cell_class,cell_type,author_cell_class,Animal_ID,no,SQUIDPY_MERFISH,same Moffitt MERFISH source represented by current Squidpy benchmark

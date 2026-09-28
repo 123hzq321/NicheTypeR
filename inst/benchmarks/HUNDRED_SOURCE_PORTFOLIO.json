@@ -1,0 +1,18 @@
+{
+  "processed_public_source_ids": 100,
+  "label_bearing_validation_source_ids": 61,
+  "cluster_only_calibration_source_ids": 39,
+  "label_bearing_benchmark_configurations": 68,
+  "cluster_only_calibration_configurations": 39,
+  "total_processed_configurations": 107,
+  "validation_configuration_level_units": 1271329,
+  "validation_source_deduplicated_units": 1239332,
+  "calibration_units": 115144,
+  "total_configuration_level_units": 1386473,
+  "main_learned_strict_passes": 9,
+  "main_context_specific_strict_passes": 1,
+  "calibration_learned_strict_passes": 8,
+  "calibration_context_specific_strict_passes": 0,
+  "known_validation_publication_families": 59,
+  "calibration_publication_family_deduplication_complete": false
+}

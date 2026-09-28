@@ -1,0 +1,62 @@
+source_dataset_id,publication_family,n_configurations,scales,configuration_units_total,source_deduplicated_units,has_preview_subset_and_expanded_configuration,independence_note
+GSE202623,GSE202623,2,expanded | preview,36245,33760,True,named public source ID; not automatically an independent donor/cohort
+GSE240015,GSE240015,1,preview,3910,3910,False,named public source ID; not automatically an independent donor/cohort
+GSE245263,GSE245263,1,expanded,2158,2158,False,named public source ID; not automatically an independent donor/cohort
+GSE263450,GSE263450,1,expanded,36521,36521,False,named public source ID; not automatically an independent donor/cohort
+GSE273530,GSE273530,1,expanded,8976,8976,False,named public source ID; not automatically an independent donor/cohort
+GSE273952,GSE273952,1,expanded,5000,5000,False,named public source ID; not automatically an independent donor/cohort
+GSE278766,GSE278766,1,expanded,32011,32011,False,named public source ID; not automatically an independent donor/cohort
+GSE279181,GSE279181,1,expanded,11677,11677,False,named public source ID; not automatically an independent donor/cohort
+GSE280376,GSE280376,1,expanded,92321,92321,False,named public source ID; not automatically an independent donor/cohort
+GSE282127,GSE282127,1,expanded,53108,53108,False,named public source ID; not automatically an independent donor/cohort
+GSE284005,GSE284005,2,expanded | preview,43743,34350,True,named public source ID; not automatically an independent donor/cohort
+GSE291308,GSE291308,1,expanded,17655,17655,False,named public source ID; not automatically an independent donor/cohort
+GSE292268,GSE292268,1,expanded,28166,28166,False,named public source ID; not automatically an independent donor/cohort
+GSE294759,GSE294759,1,expanded,44137,44137,False,named public source ID; not automatically an independent donor/cohort
+GSE301435,GSE301435,1,expanded,57937,57937,False,named public source ID; not automatically an independent donor/cohort
+GSE302502,GSE302502,1,expanded,23570,23570,False,named public source ID; not automatically an independent donor/cohort
+GSE305393,GSE305393,1,expanded,19039,19039,False,named public source ID; not automatically an independent donor/cohort
+GSE307588,GSE307588,1,expanded,3713,3713,False,named public source ID; not automatically an independent donor/cohort
+GSE308167,GSE308167,1,expanded,11775,11775,False,named public source ID; not automatically an independent donor/cohort
+GSE308624,GSE308624,1,expanded,18032,18032,False,named public source ID; not automatically an independent donor/cohort
+GSE308952,GSE308952,1,expanded,3720,3720,False,named public source ID; not automatically an independent donor/cohort
+GSE310129,GSE310129,1,expanded,22522,22522,False,named public source ID; not automatically an independent donor/cohort
+GSE311681,GSE311681,1,expanded,33574,33574,False,named public source ID; not automatically an independent donor/cohort
+GSE317755,GSE317755,1,expanded,3188,3188,False,named public source ID; not automatically an independent donor/cohort
+GSE325587,GSE325587,1,expanded,20386,20386,False,named public source ID; not automatically an independent donor/cohort
+GSE326743,GSE326743,1,expanded,64284,64284,False,named public source ID; not automatically an independent donor/cohort
+GSE327129,GSE327129,1,expanded,7303,7303,False,named public source ID; not automatically an independent donor/cohort
+GSE327581,GSE327581,2,expanded | preview,21871,16371,True,named public source ID; not automatically an independent donor/cohort
+GSE328481,GSE328481,1,expanded,15000,15000,False,named public source ID; not automatically an independent donor/cohort
+GSE330849,GSE330849,1,expanded,52701,52701,False,named public source ID; not automatically an independent donor/cohort
+GSE333479,GSE333479,1,expanded,20448,20448,False,named public source ID; not automatically an independent donor/cohort
+GSE333737,GSE333737,2,expanded | preview,26622,24222,True,named public source ID; not automatically an independent donor/cohort
+GSE336633,GSE336633,1,expanded,75580,75580,False,named public source ID; not automatically an independent donor/cohort
+GSE337336,GSE337336,1,expanded,20000,20000,False,named public source ID; not automatically an independent donor/cohort
+SODB:Allen2022Molecular_aging,SODB:Allen2022Molecular,1,expanded,8596,8596,False,named public source ID; not automatically an independent donor/cohort
+SODB:Allen2022Molecular_lps,SODB:Allen2022Molecular,1,expanded,8840,8840,False,named public source ID; not automatically an independent donor/cohort
+SODB:Booeshaghi2021Isoform,SODB:Booeshaghi2021Isoform,1,expanded,3502,3502,False,named public source ID; not automatically an independent donor/cohort
+SODB:Fang2022Conservation,SODB:Fang2022Conservation,1,expanded,11648,11648,False,named public source ID; not automatically an independent donor/cohort
+SODB:Marshall2022High_human,SODB:Marshall2022High,1,expanded,13496,13496,False,named public source ID; not automatically an independent donor/cohort
+SODB:Marshall2022High_mouse,SODB:Marshall2022High,1,expanded,8746,8746,False,named public source ID; not automatically an independent donor/cohort
+SODB:Shi2022Spatial,SODB:Shi2022Spatial,1,expanded,11310,11310,False,named public source ID; not automatically an independent donor/cohort
+SODB:Sun2021Integrating,SODB:Sun2021Integrating,1,expanded,5831,5831,False,named public source ID; not automatically an independent donor/cohort
+SODB:Wang2018Three_1k,SODB:Wang2018Three_1k,1,expanded,872,872,False,named public source ID; not automatically an independent donor/cohort
+SODB:Wu2022spatial,SODB:Wu2022spatial,1,expanded,8102,8102,False,named public source ID; not automatically an independent donor/cohort
+SODB:Zeng2023Integrative,SODB:Zeng2023Integrative,1,expanded,11199,11199,False,named public source ID; not automatically an independent donor/cohort
+SODB:chen2021dissecting,SODB:chen2021dissecting,1,expanded,8711,8711,False,named public source ID; not automatically an independent donor/cohort
+SODB:chen2022spatiotemporal,SODB:chen2022spatiotemporal,1,expanded,18360,18360,False,named public source ID; not automatically an independent donor/cohort
+SODB:codeluppi2018spatial,SODB:codeluppi2018spatial,1,expanded,5328,5328,False,named public source ID; not automatically an independent donor/cohort
+SODB:eng2019transcriptome,SODB:eng2019transcriptome,1,expanded,1826,1826,False,named public source ID; not automatically an independent donor/cohort
+SODB:he2020integrating,SODB:he2020integrating,1,expanded,2000,2000,False,named public source ID; not automatically an independent donor/cohort
+SODB:seqFISH_VISp,SODB:seqFISH_VISp,1,expanded,2721,2721,False,named public source ID; not automatically an independent donor/cohort
+SODB:wang2021easi,SODB:wang2021easi,1,expanded,46720,46720,False,named public source ID; not automatically an independent donor/cohort
+SODB:wang2022high,SODB:wang2022high,1,expanded,8589,8589,False,named public source ID; not automatically an independent donor/cohort
+SODB:wei2022single,SODB:wei2022single,1,expanded,14710,14710,False,named public source ID; not automatically an independent donor/cohort
+SQUIDPY_IMC,SQUIDPY_IMC,1,preview,1744,1744,False,named public source ID; not automatically an independent donor/cohort
+SQUIDPY_MERFISH,SQUIDPY_MERFISH,2,expanded | preview,77685,73655,True,named public source ID; not automatically an independent donor/cohort
+SQUIDPY_MIBITOF,SQUIDPY_MIBITOF,1,preview,2012,2012,False,named public source ID; not automatically an independent donor/cohort
+SQUIDPY_SEQFISH,SQUIDPY_SEQFISH,2,expanded | preview,24805,19416,True,named public source ID; not automatically an independent donor/cohort
+SQUIDPY_SLIDESEQV2,SQUIDPY_SLIDESEQV2,2,expanded | preview,21642,18842,True,named public source ID; not automatically an independent donor/cohort
+SQUIDPY_VISIUM_FLUO,SQUIDPY_VISIUM_FLUO,1,preview,2753,2753,False,named public source ID; not automatically an independent donor/cohort
+SQUIDPY_VISIUM_HNE,SQUIDPY_VISIUM_HNE,1,preview,2688,2688,False,named public source ID; not automatically an independent donor/cohort

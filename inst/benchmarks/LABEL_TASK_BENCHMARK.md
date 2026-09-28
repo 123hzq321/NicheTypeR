@@ -10,18 +10,18 @@ by context beyond matched null controls.
 
 | scale | dataset configs | label tasks | total support | learned improved | learned harmed | learned guardrail | context guardrail |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| all | 48 | 941 | 1070222 | 263 | 133 | 83 | 22 |
-| expanded | 36 | 724 | 1025118 | 186 | 89 | 38 | 11 |
+| all | 68 | 1283 | 1271329 | 372 | 177 | 139 | 29 |
+| expanded | 56 | 1066 | 1226225 | 295 | 133 | 94 | 18 |
 | preview | 12 | 217 | 45104 | 77 | 44 | 45 | 11 |
 
 ## Support Bins
 
 | scale | support bin | label tasks | learned improved | learned harmed | learned guardrail | context guardrail | median learned delta |
 |---|---|---:|---:|---:|---:|---:|---:|
-| expanded | 1-25 | 2 | 0 | 1 | 0 | 0 | -0.0271 |
-| expanded | 101-500 | 178 | 55 | 26 | 15 | 6 | +0.0034 |
-| expanded | 26-100 | 56 | 10 | 3 | 0 | 0 | +0.0015 |
-| expanded | 501-1000 | 138 | 35 | 21 | 2 | 1 | +0.0023 |
+| expanded | 1-25 | 5 | 0 | 1 | 0 | 0 | -0.0004 |
+| expanded | 101-500 | 280 | 87 | 48 | 28 | 7 | +0.0027 |
+| expanded | 26-100 | 106 | 25 | 13 | 7 | 2 | +0.0006 |
+| expanded | 501-1000 | 325 | 97 | 33 | 38 | 5 | +0.0024 |
 | expanded | >1000 | 350 | 86 | 38 | 21 | 4 | +0.0020 |
 | preview | 101-500 | 132 | 39 | 22 | 16 | 5 | +0.0006 |
 | preview | 26-100 | 76 | 35 | 21 | 28 | 6 | +0.0090 |
@@ -32,26 +32,26 @@ by context beyond matched null controls.
 
 | task | support | marker F1 | learned F1 | specific delta |
 |---|---:|---:|---:|---:|
+| expanded / SODB_WANG2021EASI_EXPANDED / Ex-19 | 1000 | 0.137 | 0.319 | +0.153 |
+| expanded / SODB_WANG2021EASI_EXPANDED / Ex-6 | 1000 | 0.366 | 0.495 | +0.130 |
 | preview / GEO_GSE327581_COSMX_AD_BRAIN / Telencephalon.inhibitory.neurons | 100 | 0.492 | 0.597 | +0.105 |
 | preview / SQUIDPY_SEQFISH / Presomitic mesoderm | 300 | 0.447 | 0.572 | +0.103 |
+| expanded / SODB_WANG2021EASI_EXPANDED / Inh-6 | 1000 | 0.369 | 0.474 | +0.083 |
+| expanded / SODB_WANG2021EASI_EXPANDED / Ex-5 | 1000 | 0.219 | 0.323 | +0.082 |
 | expanded / GEO_GSE326743_GENERIC_XENIUM_EXPANDED / Vascular smooth muscle cells | 2500 | 0.471 | 0.555 | +0.081 |
 | preview / GEO_GSE327581_COSMX_AD_BRAIN / Excitatory.neurons.layer.2.3 | 100 | 0.343 | 0.424 | +0.078 |
+| expanded / SODB_WANG2021EASI_EXPANDED / Ex-7 | 1000 | 0.416 | 0.496 | +0.078 |
 | preview / GEO_GSE327581_COSMX_AD_BRAIN / Astrocytes.thalamus.hypothalamus | 100 | 0.615 | 0.689 | +0.074 |
+| expanded / SODB_CODELUPPI2018SPATIAL_EXPANDED / Oligodendrocyte_COP | 171 | 0.364 | 0.480 | +0.073 |
 | preview / GSE202623_LESION / Endothelial | 65 | 0.570 | 0.652 | +0.069 |
+| expanded / SODB_WANG2021EASI_EXPANDED / Ex-20 | 1000 | 0.610 | 0.684 | +0.062 |
+| expanded / SODB_WANG2021EASI_EXPANDED / Ex-15 | 1000 | 0.625 | 0.686 | +0.060 |
 | preview / SQUIDPY_VISIUM_HNE / Pyramidal_layer_dentate_gyrus | 68 | 0.483 | 0.667 | +0.059 |
 | expanded / GEO_GSE327581_COSMX_AD_BRAIN_EXPANDED / Telencephalon.inhibitory.neurons | 300 | 0.377 | 0.451 | +0.053 |
+| expanded / SODB_WANG2021EASI_EXPANDED / Ex-13 | 1000 | 0.454 | 0.546 | +0.051 |
 | expanded / GEO_GSE282127_GENERIC_H5AD_EXPANDED / 1 | 2500 | 0.107 | 0.236 | +0.050 |
+| expanded / SODB_ALLEN2022MOLECULAR_LPS_EXPANDED / macrophage | 63 | 0.390 | 0.437 | +0.047 |
 | preview / SQUIDPY_VISIUM_FLUO / Lateral_ventricle | 47 | 0.448 | 0.525 | +0.046 |
-| preview / GEO_GSE327581_COSMX_AD_BRAIN / Granule.neurons | 100 | 0.725 | 0.791 | +0.045 |
-| preview / GEO_GSE327581_COSMX_AD_BRAIN / Inhibitory.neurons.reticular.nucleus | 100 | 0.549 | 0.596 | +0.044 |
-| preview / SQUIDPY_VISIUM_FLUO / Hippocampus | 259 | 0.641 | 0.763 | +0.044 |
-| expanded / GEO_GSE263450_GENERIC_H5AD_EXPANDED / 8 | 2094 | 0.220 | 0.298 | +0.042 |
-| expanded / GEO_GSE280376_GENERIC_XENIUM_EXPANDED / FB_Postn_Thbs4 | 1074 | 0.165 | 0.206 | +0.041 |
-| preview / GEO_GSE327581_COSMX_AD_BRAIN / Excitatory.neurons.layer.1.piriform | 100 | 0.151 | 0.220 | +0.040 |
-| preview / GEO_GSE240015_VISIUM_THYMUS_DOMAIN / d0_18mo::leiden_1.0_0 | 283 | 0.208 | 0.328 | +0.039 |
-| preview / GEO_GSE327581_COSMX_AD_BRAIN / Peptidergic.neurons | 100 | 0.490 | 0.528 | +0.038 |
-| preview / GEO_GSE327581_COSMX_AD_BRAIN / Excitatory.neurons.hippocampal.CA1 | 100 | 0.587 | 0.637 | +0.038 |
-| expanded / GEO_GSE327581_COSMX_AD_BRAIN_EXPANDED / Astrocytes.thalamus.hypothalamus | 300 | 0.672 | 0.709 | +0.037 |
 
 ## Top Context-Specific Label Tasks
 
@@ -60,6 +60,7 @@ by context beyond matched null controls.
 | preview / SQUIDPY_IMC / apoptotic tumor cell | 300 | 0.307 | 0.404 | +0.088 |
 | preview / SQUIDPY_VISIUM_HNE / Cortex_4 | 164 | 0.541 | 0.649 | +0.064 |
 | preview / GEO_GSE327581_COSMX_AD_BRAIN / Myelin.forming.oligodendrocytes | 100 | 0.150 | 0.224 | +0.060 |
+| expanded / SODB_WANG2018THREE_1K_EXPANDED / Smc | 32 | 0.836 | 0.873 | +0.037 |
 | preview / GEO_GSE327581_COSMX_AD_BRAIN / Excitatory.neurons.layer.5 | 100 | 0.194 | 0.266 | +0.035 |
 | preview / SQUIDPY_VISIUM_HNE / Fiber_tract | 226 | 0.802 | 0.832 | +0.031 |
 | expanded / GEO_GSE245263_GENERIC_H5AD_EXPANDED / 6 | 164 | 0.657 | 0.691 | +0.027 |
@@ -72,11 +73,10 @@ by context beyond matched null controls.
 | preview / GEO_GSE327581_COSMX_AD_BRAIN / Vascular.leptomeningeal.cells | 100 | 0.724 | 0.742 | +0.019 |
 | preview / GEO_GSE327581_COSMX_AD_BRAIN / Vascular.smooth.muscle.cells | 100 | 0.587 | 0.613 | +0.019 |
 | expanded / GEO_GSE245263_GENERIC_H5AD_EXPANDED / 8 | 143 | 0.333 | 0.365 | +0.018 |
+| expanded / SODB_MARSHALL2022HIGH_HUMAN_EXPANDED / CD-IC | 620 | 0.158 | 0.176 | +0.018 |
 | preview / SQUIDPY_SLIDESEQV2 / Mural | 200 | 0.216 | 0.232 | +0.015 |
 | expanded / GEO_GSE333479_H5AD_SIDECAR_EXPANDED / B cell | 2500 | 0.232 | 0.246 | +0.014 |
-| expanded / GEO_GSE327581_COSMX_AD_BRAIN_EXPANDED / Vascular.smooth.muscle.cells | 300 | 0.684 | 0.704 | +0.014 |
-| expanded / GEO_GSE327581_COSMX_AD_BRAIN_EXPANDED / Astrocytes.Bergmann.glia | 300 | 0.710 | 0.740 | +0.014 |
-| expanded / GEO_GSE307588_GENERIC_COSMX_TSV_EXPANDED / C01_S | 358 | 0.312 | 0.326 | +0.014 |
+| expanded / SODB_CODELUPPI2018SPATIAL_EXPANDED / Oligodendrocyte_Mature | 450 | 0.370 | 0.385 | +0.014 |
 
 ## Interpretation
 

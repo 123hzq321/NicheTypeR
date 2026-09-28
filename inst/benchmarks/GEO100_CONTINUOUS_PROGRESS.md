@@ -1,17 +1,22 @@
-# NicheTypeR GEO100 Expansion Progress
+# NicheTypeR 100-Source Expansion Record
 
 Updated: 2026-09-28 China Standard Time
 
 ## Verified scale
 
-- Completed independent source datasets: **41**
-- Completed benchmark configurations: **48**
+- Processed public source IDs: **100**
+- Label-bearing validation sources: **61**
+- Cluster-only calibration sources: **39**
+- Primary validation configurations: **68**
+- Total processed configurations: **107**
 - Preview configurations: **12**
-- Expanded configurations: **36**
-- Unique benchmark cells/spots across configurations: **1,070,222**
-- Sources still needed for the 100-source target: **59**
+- Expanded validation configurations: **56**
+- Source-deduplicated validation observations: **1,239,332**
+- Total configuration-level observations including calibration: **1,386,473**
 
-Only datasets that completed expression, coordinate and label reconciliation plus a blocked benchmark are counted. GEO candidates, file lists, partially downloaded accessions and cluster-only metadata are excluded from this total.
+All 100 sources completed expression/coordinate reconciliation and a blocked
+run. The 39 cluster-only SODB sources are kept in a separate operational/null
+calibration panel and excluded from the biological efficacy denominator.
 
 ## Added in this pass
 
@@ -41,13 +46,17 @@ These six sources add **215,521** benchmark cells/spots. Their labels are not al
 
 ## Aggregate evidence
 
-- Learned-neighborhood passes the prespecified dataset-level strict guardrail in **6/48** configurations.
-- Context-specific residual passes in **0/48** configurations.
-- Expanded-only learned-neighborhood passes occur in **3/36** configurations:
+- Learned-neighborhood passes the prespecified dataset-level strict guardrail in **9/68** validation configurations.
+- Context-specific residual passes in **1/68** validation configurations; the event is a tumour-region spatial-domain task, not a cell-type benchmark.
+- Expanded learned-neighborhood passes occur in **6/56** configurations:
   - `GEO_GSE327581_COSMX_AD_BRAIN_EXPANDED`
   - `GEO_GSE263450_GENERIC_H5AD_EXPANDED`
   - `GEO_GSE308952_H5AD_INTERNAL_LABEL_EXPANDED`
-- Expanded-only context-specific residual passes occur in **0/36** configurations.
+  - `SODB_FANG2022CONSERVATION_EXPANDED`
+  - `SODB_WANG2021EASI_EXPANDED`
+  - `SODB_ZENG2023INTEGRATIVE_EXPANDED`
+- Expanded context-specific residual passes occur in **1/56** configurations:
+  - `SODB_HE2020INTEGRATING_EXPANDED`
 
 Among the latest six datasets, GSE308952 adds one learned-neighborhood strict pass. The other five either fail to beat the expression baseline or remain too close to the random-graph/permuted-prior controls. The larger benchmark improves coverage and precision; it does not justify a universal efficacy claim.
 
@@ -93,4 +102,9 @@ Among the latest six datasets, GSE308952 adds one learned-neighborhood strict pa
 
 ## Current interpretation
 
-The project has reached 41 independent public source IDs and 48 completed configurations, but it has not reached 100 sources. The larger benchmark strengthens the positioning of NicheTypeR as an annotation-audit framework: context can be informative in selected datasets, yet the present neighborhood and CSAE mechanisms do not consistently add specific predictive value over expression evidence and matched null controls.
+The project has reached 100 processed public source IDs without treating them as
+100 independent gold standards. The 61-source label-bearing validation panel
+supports the positioning of NicheTypeR as an annotation-audit framework:
+context can be informative in selected datasets, yet the present neighborhood
+and CSAE mechanisms do not consistently add specific predictive value over
+expression evidence and matched null controls.

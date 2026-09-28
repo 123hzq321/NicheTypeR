@@ -1,0 +1,69 @@
+dataset_id,source_dataset_id,configuration_units,scale,task_description,publication_family,excluded_from_source_deduplicated_unit_total
+GEO_GSE240015_VISIUM_THYMUS_DOMAIN,GSE240015,3910,preview,preview blocked benchmark,GSE240015,False
+GEO_GSE284005_MERSCOPE_MS,GSE284005,9393,preview,preview blocked benchmark,GSE284005,True
+GEO_GSE327581_COSMX_AD_BRAIN,GSE327581,5500,preview,preview blocked benchmark,GSE327581,True
+GEO_GSE333737_MERSCOPE_PANCREAS_VASCULAR,GSE333737,2400,preview,preview blocked benchmark,GSE333737,True
+GSE202623_LESION,GSE202623,2485,preview,preview blocked benchmark,GSE202623,True
+SQUIDPY_IMC,SQUIDPY_IMC,1744,preview,preview blocked benchmark,SQUIDPY_IMC,False
+SQUIDPY_MERFISH,SQUIDPY_MERFISH,4030,preview,preview blocked benchmark,SQUIDPY_MERFISH,True
+SQUIDPY_MIBITOF,SQUIDPY_MIBITOF,2012,preview,preview blocked benchmark,SQUIDPY_MIBITOF,False
+SQUIDPY_SEQFISH,SQUIDPY_SEQFISH,5389,preview,preview blocked benchmark,SQUIDPY_SEQFISH,True
+SQUIDPY_SLIDESEQV2,SQUIDPY_SLIDESEQV2,2800,preview,preview blocked benchmark,SQUIDPY_SLIDESEQV2,True
+SQUIDPY_VISIUM_FLUO,SQUIDPY_VISIUM_FLUO,2753,preview,preview blocked benchmark,SQUIDPY_VISIUM_FLUO,False
+SQUIDPY_VISIUM_HNE,SQUIDPY_VISIUM_HNE,2688,preview,preview blocked benchmark,SQUIDPY_VISIUM_HNE,False
+GSE202623_CELLTYPE_EXPANDED,GSE202623,33760,expanded,large balanced Huntington disease MERFISH cell-type benchmark,GSE202623,False
+GEO_GSE333737_MERSCOPE_PANCREAS_VASCULAR_EXPANDED,GSE333737,24222,expanded,"adult human pancreas vascular-associated populations, all cells",GSE333737,False
+GEO_GSE284005_MERSCOPE_MS_EXPANDED,GSE284005,34350,expanded,"human multiple sclerosis lesion atlas, balanced large subset",GSE284005,False
+GEO_GSE327581_COSMX_AD_BRAIN_EXPANDED,GSE327581,16371,expanded,"3xTg-AD mouse brain after fecal microbiota transplant, balanced large subset",GSE327581,False
+SQUIDPY_MERFISH_EXPANDED,SQUIDPY_MERFISH,73655,expanded,"MERFISH mouse hypothalamus/preoptic region, all clean cells",SQUIDPY_MERFISH,False
+SQUIDPY_SEQFISH_EXPANDED,SQUIDPY_SEQFISH,19416,expanded,"seqFISH mouse organogenesis, all clean cells",SQUIDPY_SEQFISH,False
+SQUIDPY_SLIDESEQV2_EXPANDED,SQUIDPY_SLIDESEQV2,18842,expanded,"Slide-seqV2 mouse hippocampus, balanced large subset",SQUIDPY_SLIDESEQV2,False
+GEO_GSE302502_XENIUM_GLIOMA_TLS_EXPANDED,GSE302502,23570,expanded,human glioma tertiary lymphoid structures with coarse immune/stromal cell labels,GSE302502,False
+GEO_GSE282127_GENERIC_H5AD_EXPANDED,GSE282127,53108,expanded,GSE282127 prepared by generic h5ad parser,GSE282127,False
+GEO_GSE245263_GENERIC_H5AD_EXPANDED,GSE245263,2158,expanded,GSE245263 prepared by generic h5ad parser,GSE245263,False
+GEO_GSE263450_GENERIC_H5AD_EXPANDED,GSE263450,36521,expanded,GSE263450 prepared by generic h5ad parser,GSE263450,False
+GEO_GSE294759_GENERIC_H5AD_EXPANDED,GSE294759,44137,expanded,GSE294759 prepared by generic h5ad parser,GSE294759,False
+GEO_GSE301435_GENERIC_COSMX_CSV_EXPANDED,GSE301435,57937,expanded,GSE301435 prepared by generic CosMx CSV expression+metadata parser,GSE301435,False
+GEO_GSE308624_GENERIC_H5AD_EXPANDED,GSE308624,18032,expanded,GSE308624 prepared by generic h5ad parser,GSE308624,False
+GEO_GSE310129_GENERIC_H5AD_EXPANDED,GSE310129,22522,expanded,GSE310129 prepared by generic h5ad parser,GSE310129,False
+GEO_GSE317755_GENERIC_H5AD_EXPANDED,GSE317755,3188,expanded,GSE317755 prepared by generic h5ad parser,GSE317755,False
+GEO_GSE327129_GENERIC_H5AD_EXPANDED,GSE327129,7303,expanded,GSE327129 prepared by generic h5ad parser,GSE327129,False
+GEO_GSE328481_GENERIC_H5AD_EXPANDED,GSE328481,15000,expanded,GSE328481 prepared by generic h5ad parser,GSE328481,False
+GEO_GSE330849_GENERIC_H5AD_EXPANDED,GSE330849,52701,expanded,GSE330849 prepared by generic h5ad parser,GSE330849,False
+GEO_GSE325587_GENERIC_CSV_PAIR_EXPANDED,GSE325587,20386,expanded,GSE325587 prepared by generic CSV expression+metadata pair parser,GSE325587,False
+GEO_GSE273530_GENERIC_COSMX_CSV_EXPANDED,GSE273530,8976,expanded,GSE273530 prepared by generic CosMx CSV expression+metadata parser,GSE273530,False
+GEO_GSE273952_GENERIC_VISIUM_H5_ANNOTATION_EXPANDED,GSE273952,5000,expanded,GSE273952 prepared by generic Visium 10x h5 + annotation parser,GSE273952,False
+GEO_GSE337336_GENERIC_CSV_PAIR_EXPANDED,GSE337336,20000,expanded,GSE337336 prepared by generic CSV expression+metadata pair parser,GSE337336,False
+GEO_GSE307588_GENERIC_COSMX_TSV_EXPANDED,GSE307588,3713,expanded,GSE307588 prepared by generic CosMx TSV triple parser,GSE307588,False
+GEO_GSE326743_GENERIC_XENIUM_EXPANDED,GSE326743,64284,expanded,GSE326743 prepared by generic Xenium matrix+annotation parser,GSE326743,False
+GEO_GSE305393_GENERIC_COSMX_CSV_EXPANDED,GSE305393,19039,expanded,GSE305393 prepared by generic CosMx CSV expression+metadata parser,GSE305393,False
+GEO_GSE291308_GENERIC_CSV_PAIR_EXPANDED,GSE291308,17655,expanded,GSE291308 prepared by generic CSV expression+metadata pair parser,GSE291308,False
+GEO_GSE311681_GENERIC_XENIUM_EXPANDED,GSE311681,33574,expanded,GSE311681 prepared by generic Xenium matrix+annotation parser,GSE311681,False
+GEO_GSE292268_GENERIC_COSMX_CSV_EXPANDED,GSE292268,28166,expanded,GSE292268 prepared by generic CosMx CSV expression+metadata parser,GSE292268,False
+GEO_GSE278766_GENERIC_COSMX_CSV_EXPANDED,GSE278766,32011,expanded,GSE278766 prepared by generic CosMx CSV expression+metadata parser,GSE278766,False
+GEO_GSE333479_H5AD_SIDECAR_EXPANDED,GSE333479,20448,expanded,GSE333479 prepared by multi-H5AD sidecar-annotation parser,GSE333479,False
+GEO_GSE279181_H5AD_COMPOSITION_EXPANDED,GSE279181,11677,expanded,GSE279181 prepared by multi-H5AD composition-argmax parser,GSE279181,False
+GEO_GSE280376_GENERIC_XENIUM_EXPANDED,GSE280376,92321,expanded,GSE280376 prepared by generic Xenium matrix+annotation parser,GSE280376,False
+GEO_GSE308167_H5AD_INTERNAL_LABEL_EXPANDED,GSE308167,11775,expanded,GSE308167 prepared by multi-H5AD internal-label parser,GSE308167,False
+GEO_GSE308952_H5AD_INTERNAL_LABEL_EXPANDED,GSE308952,3720,expanded,GSE308952 prepared by multi-H5AD internal-label parser,GSE308952,False
+GEO_GSE336633_H5AD_INTERNAL_LABEL_EXPANDED,GSE336633,75580,expanded,GSE336633 prepared by multi-H5AD internal-label parser,GSE336633,False
+SODB_WANG2022HIGH_EXPANDED,SODB:wang2022high,8589,expanded,SODB wang2022high; spatial_domain; label evidence=author_tissue_annotation,SODB:wang2022high,False
+SODB_ALLEN2022MOLECULAR_AGING_EXPANDED,SODB:Allen2022Molecular_aging,8596,expanded,SODB Allen2022Molecular_aging; cell_type; label evidence=author_and_ontology_annotation,SODB:Allen2022Molecular,False
+SODB_ALLEN2022MOLECULAR_LPS_EXPANDED,SODB:Allen2022Molecular_lps,8840,expanded,SODB Allen2022Molecular_lps; cell_type; label evidence=author_and_ontology_annotation,SODB:Allen2022Molecular,False
+SODB_BOOESHAGHI2021ISOFORM_EXPANDED,SODB:Booeshaghi2021Isoform,3502,expanded,SODB Booeshaghi2021Isoform; cell_type; label evidence=author_subclass,SODB:Booeshaghi2021Isoform,False
+SODB_FANG2022CONSERVATION_EXPANDED,SODB:Fang2022Conservation,11648,expanded,SODB Fang2022Conservation; cell_type; label evidence=author_hierarchical_cell_cluster,SODB:Fang2022Conservation,False
+SODB_MARSHALL2022HIGH_HUMAN_EXPANDED,SODB:Marshall2022High_human,13496,expanded,SODB Marshall2022High_human; cell_type; label evidence=author_cell_type,SODB:Marshall2022High,False
+SODB_MARSHALL2022HIGH_MOUSE_EXPANDED,SODB:Marshall2022High_mouse,8746,expanded,SODB Marshall2022High_mouse; cell_type; label evidence=author_cell_type,SODB:Marshall2022High,False
+SODB_SHI2022SPATIAL_EXPANDED,SODB:Shi2022Spatial,11310,expanded,SODB Shi2022Spatial; cell_type; label evidence=author_molecular_cell_type,SODB:Shi2022Spatial,False
+SODB_WANG2018THREE_1K_EXPANDED,SODB:Wang2018Three_1k,872,expanded,SODB Wang2018Three_1k; cell_type; label evidence=author_cell_type,SODB:Wang2018Three_1k,False
+SODB_WU2022SPATIAL_EXPANDED,SODB:Wu2022spatial,8102,expanded,SODB Wu2022spatial; cell_type; label evidence=author_annotation,SODB:Wu2022spatial,False
+SODB_ZENG2023INTEGRATIVE_EXPANDED,SODB:Zeng2023Integrative,11199,expanded,SODB Zeng2023Integrative; cell_type; label evidence=author_cell_type,SODB:Zeng2023Integrative,False
+SODB_CHEN2021DISSECTING_EXPANDED,SODB:chen2021dissecting,8711,expanded,SODB chen2021dissecting; cell_type; label evidence=author_cell_type,SODB:chen2021dissecting,False
+SODB_CODELUPPI2018SPATIAL_EXPANDED,SODB:codeluppi2018spatial,5328,expanded,SODB codeluppi2018spatial; cell_type; label evidence=author_cell_cluster,SODB:codeluppi2018spatial,False
+SODB_WEI2022SINGLE_EXPANDED,SODB:wei2022single,14710,expanded,SODB wei2022single; cell_type; label evidence=author_annotation,SODB:wei2022single,False
+SODB_WANG2021EASI_EXPANDED,SODB:wang2021easi,46720,expanded,SODB wang2021easi; cell_type; label evidence=author_cell_type,SODB:wang2021easi,False
+SODB_ENG2019TRANSCRIPTOME_EXPANDED,SODB:eng2019transcriptome,1826,expanded,SODB eng2019transcriptome; cell_type; label evidence=author_cell_type,SODB:eng2019transcriptome,False
+SODB_HE2020INTEGRATING_EXPANDED,SODB:he2020integrating,2000,expanded,SODB he2020integrating; spatial_domain; label evidence=author_tumor_region,SODB:he2020integrating,False
+SODB_CHEN2022SPATIOTEMPORAL_EXPANDED,SODB:chen2022spatiotemporal,18360,expanded,SODB chen2022spatiotemporal; spatial_domain; label evidence=author_tissue_annotation,SODB:chen2022spatiotemporal,False
+SODB_SUN2021INTEGRATING_EXPANDED,SODB:Sun2021Integrating,5831,expanded,SODB Sun2021Integrating; spatial_domain; label evidence=author_cortical_layer,SODB:Sun2021Integrating,False
+SODB_SEQFISH_VISP_EXPANDED,SODB:seqFISH_VISp,2721,expanded,SODB seqFISH_VISp; spatial_domain; label evidence=author_cortical_layer,SODB:seqFISH_VISp,False

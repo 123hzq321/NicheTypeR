@@ -339,7 +339,7 @@ def source_tile(c, x, y, w, top, bottom, fill, stroke, icon):
         c.rect(ix - 9, iy - 8, 19, 16, stroke=1, fill=0)
     else:
         c.setFont("Helvetica-Bold", 11)
-        c.drawCentredString(ix, iy - 4, "41")
+        c.drawCentredString(ix, iy - 4, "100")
 
     tx = x + (52 if icon in ("species", "tissue", "platform") else 38)
     c.setFillColor(stroke)
@@ -532,10 +532,10 @@ def build():
     c.setLineWidth(0.9)
     c.roundRect(band_x, band_y, band_w, band_h, 8, stroke=1, fill=1)
     tile_y = band_y + 6
-    source_tile(c, band_x + 11, tile_y, 132, "6 species", "human, mouse, macaque + 3", COLORS["white"], COLORS["blue"], "species")
+    source_tile(c, band_x + 11, tile_y, 132, "Multiple species", "human, mouse and models", COLORS["white"], COLORS["blue"], "species")
     source_tile(c, band_x + 150, tile_y, 190, "Diverse tissues", "brain, tumor, immune-rich", COLORS["white"], COLORS["blue"], "tissue")
     source_tile(c, band_x + 347, tile_y, 235, "Multiple assay families", "MERFISH, CosMx, Visium, IMC, Slide-seqV2", COLORS["white"], COLORS["blue"], "platform")
-    source_tile(c, band_x + 589, tile_y, 144, "41 source datasets", "48 benchmark settings", COLORS["white"], COLORS["blue"], "count")
+    source_tile(c, band_x + 589, tile_y, 144, "100 public sources", "61 labelled + 39 calibration", COLORS["white"], COLORS["blue"], "count")
 
     c.showPage()
     c.save()

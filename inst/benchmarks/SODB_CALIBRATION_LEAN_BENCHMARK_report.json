@@ -1,0 +1,8 @@
+{
+  "prepared_sodb_configurations": 39,
+  "completed_sodb_configurations": 39,
+  "completed_sodb_source_ids": 39,
+  "completed_unique_cells_or_spots": 115144,
+  "learned_neighborhood_strict_passes": 8,
+  "context_specific_strict_passes": 0
+}
