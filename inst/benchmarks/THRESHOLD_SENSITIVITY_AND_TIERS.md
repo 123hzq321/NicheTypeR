@@ -10,17 +10,17 @@ delta and matched-null improvement.
 
 | macro-F1 delta threshold | learned-neighborhood configs | context-residual configs |
 |---:|---:|---:|
-| 0 | 8/19 | 1/19 |
-| 0.001 | 5/19 | 1/19 |
-| 0.0025 | 5/19 | 0/19 |
-| 0.005 | 4/19 | 0/19 |
-| 0.0075 | 4/19 | 0/19 |
-| 0.01 | 0/19 | 0/19 |
-| 0.02 | 0/19 | 0/19 |
+| 0 | 17/48 | 5/48 |
+| 0.001 | 11/48 | 2/48 |
+| 0.0025 | 10/48 | 0/48 |
+| 0.005 | 6/48 | 0/48 |
+| 0.0075 | 5/48 | 0/48 |
+| 0.01 | 1/48 | 0/48 |
+| 0.02 | 0/48 | 0/48 |
 
-Interpretation: the strict 0.005 cutoff gives 5/34 learned-neighborhood
-configurations and 0/34 context-residual configurations. As an
-exploratory directional readout, a zero cutoff gives 14/34 and 2/34,
+Interpretation: the strict 0.005 cutoff gives 6/48 learned-neighborhood
+configurations and 0/48 context-residual configurations. As an
+exploratory directional readout, a zero cutoff gives 17/48 and 5/48,
 respectively. This should be described as sensitivity, not as a new
 success criterion.
 
@@ -28,8 +28,8 @@ success criterion.
 
 | evidence_layer | n_dataset_configs | strict_support | directional_support | no_directional_support |
 | --- | --- | --- | --- | --- |
-| learned_neighborhood | 19 | 4 | 4 | 11 |
-| context_residual | 19 | 0 | 1 | 18 |
+| learned_neighborhood | 48 | 6 | 11 | 31 |
+| context_residual | 48 | 0 | 5 | 43 |
 
 ## Label-Task Threshold Sensitivity
 
@@ -38,20 +38,20 @@ and case-study selection, but they are not independent cohorts.
 
 | label-task F1 delta threshold | learned-neighborhood tasks | context-residual tasks |
 |---:|---:|---:|
-| 0 | 156/408 | 92/408 |
-| 0.001 | 133/408 | 78/408 |
-| 0.0025 | 118/408 | 56/408 |
-| 0.005 | 89/408 | 36/408 |
-| 0.01 | 57/408 | 15/408 |
-| 0.02 | 34/408 | 8/408 |
-| 0.05 | 7/408 | 3/408 |
+| 0 | 310/941 | 167/941 |
+| 0.001 | 251/941 | 138/941 |
+| 0.0025 | 204/941 | 96/941 |
+| 0.005 | 142/941 | 56/941 |
+| 0.01 | 83/941 | 22/941 |
+| 0.02 | 44/941 | 11/941 |
+| 0.05 | 8/941 | 3/941 |
 
 ## Label-Task Tiered Support
 
 | evidence_layer | n_label_tasks | n_eligible_label_tasks | strong_support_delta_gt_0_01 | suggestive_support_delta_0_to_0_01 | no_gain_or_harm | missing_matched_null_delta |
 | --- | --- | --- | --- | --- | --- | --- |
-| learned_neighborhood | 408 | 407 | 57 | 99 | 251 | 1 |
-| context_residual | 408 | 407 | 15 | 77 | 315 | 1 |
+| learned_neighborhood | 941 | 941 | 83 | 227 | 631 | 0 |
+| context_residual | 941 | 941 | 22 | 145 | 774 | 0 |
 
 ## Manuscript Wording
 

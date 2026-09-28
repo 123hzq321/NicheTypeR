@@ -1,6 +1,6 @@
 Package: NicheTypeR
 Title: Context-Aware Annotation Auditing for Spatial Transcriptomics
-Version: 0.0.5
+Version: 0.0.6
 Authors@R: c(
     person("Zhequan", "Hu", role = "aut",
            email = "s2024003064@student.pumc.edu.cn"),

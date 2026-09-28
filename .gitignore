@@ -6,4 +6,5 @@
 *.tar.gz
 *.zip
 *.html
+!inst/doc/*.html
 *.pdf

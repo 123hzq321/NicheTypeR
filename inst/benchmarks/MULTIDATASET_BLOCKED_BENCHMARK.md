@@ -6,9 +6,12 @@ inside each training fold, then evaluates held-out spatial groups.
 Models:
 
 - `marker_only`
+- `reference_profile`
+- `marker_reference_profile`
 - `marker_spatial_smoothing`
 - `marker_spatial_smoothing_random_graph`
 - `marker_learned_neighborhood`
+- `reference_profile_learned_neighborhood`
 - `marker_context_specific_neighborhood`
 - `learned_random_graph`
 - `learned_permuted_prior`
@@ -31,13 +34,13 @@ Models:
 | GEO_GSE284005_MERSCOPE_MS | marker_only | 0.4996 | 0.4806 | 0.5861 |
 | GEO_GSE284005_MERSCOPE_MS | marker_spatial_smoothing | 0.5034 | 0.4837 | 0.6206 |
 | GEO_GSE284005_MERSCOPE_MS | marker_spatial_smoothing_random_graph | 0.5019 | 0.4820 | 0.6129 |
-| GEO_GSE327581_COSMX_AD_BRAIN | learned_permuted_prior | 0.4942 | 0.4751 | 0.5893 |
-| GEO_GSE327581_COSMX_AD_BRAIN | learned_random_graph | 0.4925 | 0.4739 | 0.5098 |
+| GEO_GSE327581_COSMX_AD_BRAIN | learned_permuted_prior | 0.4942 | 0.4665 | 0.5893 |
+| GEO_GSE327581_COSMX_AD_BRAIN | learned_random_graph | 0.4925 | 0.4653 | 0.5098 |
 | GEO_GSE327581_COSMX_AD_BRAIN | marker_context_specific_neighborhood | 0.5042 | 0.4772 | 0.6258 |
-| GEO_GSE327581_COSMX_AD_BRAIN | marker_learned_neighborhood | 0.5058 | 0.4851 | 0.6385 |
-| GEO_GSE327581_COSMX_AD_BRAIN | marker_only | 0.4940 | 0.4752 | 0.4135 |
-| GEO_GSE327581_COSMX_AD_BRAIN | marker_spatial_smoothing | 0.4980 | 0.4796 | 0.5216 |
-| GEO_GSE327581_COSMX_AD_BRAIN | marker_spatial_smoothing_random_graph | 0.5016 | 0.4832 | 0.5113 |
+| GEO_GSE327581_COSMX_AD_BRAIN | marker_learned_neighborhood | 0.5058 | 0.4763 | 0.6385 |
+| GEO_GSE327581_COSMX_AD_BRAIN | marker_only | 0.4940 | 0.4666 | 0.4135 |
+| GEO_GSE327581_COSMX_AD_BRAIN | marker_spatial_smoothing | 0.4980 | 0.4709 | 0.5216 |
+| GEO_GSE327581_COSMX_AD_BRAIN | marker_spatial_smoothing_random_graph | 0.5016 | 0.4744 | 0.5113 |
 | GEO_GSE333737_MERSCOPE_PANCREAS_VASCULAR | learned_permuted_prior | 0.7554 | 0.7524 | 0.6396 |
 | GEO_GSE333737_MERSCOPE_PANCREAS_VASCULAR | learned_random_graph | 0.7558 | 0.7528 | 0.7033 |
 | GEO_GSE333737_MERSCOPE_PANCREAS_VASCULAR | marker_context_specific_neighborhood | 0.7579 | 0.7548 | 0.6596 |
@@ -52,7 +55,7 @@ Models:
 | GSE202623_LESION | marker_only | 0.7042 | 0.5857 | 0.3618 |
 | GSE202623_LESION | marker_spatial_smoothing | 0.7038 | 0.5855 | 0.4012 |
 | GSE202623_LESION | marker_spatial_smoothing_random_graph | 0.7054 | 0.5866 | 0.4153 |
-| SQUIDPY_IMC | learned_permuted_prior | 0.3939 | 0.4036 | 0.7133 |
+| SQUIDPY_IMC | learned_permuted_prior | 0.3939 | 0.3669 | 0.7133 |
 | SQUIDPY_IMC | learned_random_graph | 0.3933 | 0.3625 | 0.6795 |
 | SQUIDPY_IMC | marker_context_specific_neighborhood | 0.4031 | 0.3713 | 0.7041 |
 | SQUIDPY_IMC | marker_learned_neighborhood | 0.3916 | 0.3637 | 0.6737 |
@@ -118,10 +121,10 @@ and positive accuracy delta.
 |---|---:|---|---:|---|---:|---|---|
 | GEO_GSE240015_VISIUM_THYMUS_DOMAIN | -0.0227 | no | -0.0196 | no | +0.0098 | yes | simple spatial smoothing beats marker and random smoothing |
 | GEO_GSE284005_MERSCOPE_MS | -0.0002 | no | +0.0008 | no | +0.0017 | no | context signal is not specific under null controls |
-| GEO_GSE327581_COSMX_AD_BRAIN | -0.0079 | no | +0.0099 | yes | -0.0035 | no | learned neighborhood beats marker and null controls |
+| GEO_GSE327581_COSMX_AD_BRAIN | +0.0009 | no | +0.0097 | yes | -0.0035 | no | learned neighborhood beats marker and null controls |
 | GEO_GSE333737_MERSCOPE_PANCREAS_VASCULAR | -0.0019 | no | -0.0015 | no | +0.0008 | no | context signal is not specific under null controls |
 | GSE202623_LESION | -0.0058 | no | +0.0099 | yes | -0.0011 | no | learned neighborhood beats marker and null controls |
-| SQUIDPY_IMC | -0.0323 | no | -0.0399 | no | -0.0089 | no | context signal is not specific under null controls |
+| SQUIDPY_IMC | -0.0021 | no | -0.0033 | no | -0.0089 | no | context signal is not specific under null controls |
 | SQUIDPY_MERFISH | -0.0093 | no | +0.0030 | no | -0.0076 | no | context signal is not specific under null controls |
 | SQUIDPY_MIBITOF | -0.0105 | no | -0.0063 | no | -0.0073 | no | context signal is not specific under null controls |
 | SQUIDPY_SEQFISH | -0.0074 | no | +0.0092 | yes | +0.0054 | yes | learned neighborhood beats marker and null controls |
@@ -135,10 +138,10 @@ and positive accuracy delta.
 |---|---|---:|---:|
 | GEO_GSE240015_VISIUM_THYMUS_DOMAIN | marker_spatial_smoothing | 0.3583 | 0.3193 |
 | GEO_GSE284005_MERSCOPE_MS | marker_spatial_smoothing | 0.5034 | 0.4837 |
-| GEO_GSE327581_COSMX_AD_BRAIN | marker_learned_neighborhood | 0.5058 | 0.4851 |
+| GEO_GSE327581_COSMX_AD_BRAIN | marker_context_specific_neighborhood | 0.5042 | 0.4772 |
 | GEO_GSE333737_MERSCOPE_PANCREAS_VASCULAR | marker_spatial_smoothing | 0.7604 | 0.7575 |
 | GSE202623_LESION | marker_learned_neighborhood | 0.7171 | 0.5968 |
-| SQUIDPY_IMC | learned_permuted_prior | 0.3939 | 0.4036 |
+| SQUIDPY_IMC | marker_spatial_smoothing_random_graph | 0.4083 | 0.3734 |
 | SQUIDPY_MERFISH | marker_spatial_smoothing_random_graph | 0.7938 | 0.7551 |
 | SQUIDPY_MIBITOF | marker_spatial_smoothing_random_graph | 0.5487 | 0.5222 |
 | SQUIDPY_SEQFISH | marker_learned_neighborhood | 0.6595 | 0.6060 |

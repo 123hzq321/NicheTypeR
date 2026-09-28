@@ -53,8 +53,8 @@ software framework with conservative benchmarking, not a universal
 state-of-the-art cell type classifier.
 
 The current benchmark snapshot distinguishes biological source datasets from
-analysis configurations: 34 completed configurations correspond to 27 source
-datasets, not 34 independent cohorts. Held-out author or curator-provided
+analysis configurations: 48 completed configurations correspond to 41 source
+datasets, not 48 independent cohorts. Held-out author or curator-provided
 labels are used as reproducible reference labels for discordance detection,
 while audit conflicts remain hypotheses for re-adjudication rather than
 automatic replacements for biological ground truth.
@@ -410,13 +410,13 @@ marker-only call, or changes a still-incorrect call. This is the most direct
 evidence for the package's intended role as an annotation-audit layer.
 
 Current cross-dataset result after direct GEO expansion: learned neighborhood
-passes the null-control guardrail in GSE202623 lesion MERFISH, Squidpy seqFISH,
-and the GEO-direct GSE327581 CosMx AD brain dataset. The GEO-direct MS and
-pancreas MERSCOPE/MERFISH datasets do not show a specific learned context gain.
-The GEO-direct GSE240015 thymus Visium domain benchmark is best explained by
-simple spatial smoothing, not learned neighborhood. Most datasets either show no
-specific context gain or are better explained by generic spatial smoothing/domain
-structure. This strengthens the audit-framework claim but does not support a
+passes the strict matched-null guardrail in 6 of 48 configurations. The three
+preview passes are GSE202623 lesion MERFISH, Squidpy seqFISH and GSE327581
+CosMx AD brain; the three expanded passes are GSE263450, GSE308952 and the
+expanded GSE327581 benchmark. The null-corrected context-specific residual
+passes in 0 of 48 configurations. Most datasets therefore show no specific
+context gain, or are better explained by generic spatial smoothing/domain
+structure. This supports a selective audit-framework claim but not a
 state-of-the-art classifier claim.
 
 The biological audit casebook in
@@ -429,23 +429,23 @@ summaries so users can inspect whether the predicted label is spatially
 plausible. This is retrospective evidence for annotation triage, not a
 prospective pathology re-annotation experiment.
 
-The expanded-scale stress test now covers 22 configurations and 591,155 cells or
-spots. In that larger setting, learned neighborhood passes the strict matched
-null guardrail in two expanded configurations, including the GSE327581 CosMx AD
-brain expansion and GSE263450 generic H5AD expansion; the context-specific
-residual does not pass in any expanded configuration.
+The expanded-scale stress test now covers 36 configurations and 1,025,118
+cells or spots. In that larger setting, learned neighborhood passes the strict
+matched-null guardrail in three configurations: GSE263450, GSE308952 and the
+GSE327581 CosMx AD brain expansion. The context-specific residual does not pass
+in any expanded configuration.
 
 For label-level audit granularity, `inst/benchmarks/LABEL_TASK_BENCHMARK.md`
-summarizes 663 dataset-label validation tasks across the 12 preview and 22
+summarizes 941 dataset-label validation tasks across the 12 preview and 36
 expanded benchmark configurations. Learned-neighborhood evidence improves over
-marker-only in 225 tasks, harms 95 tasks and passes matched label-level
-guardrails in 72 tasks. These are label-level audit tasks, not independent
+marker-only in 263 tasks, harms 133 tasks and passes matched label-level
+guardrails in 83 tasks. These are label-level audit tasks, not independent
 cohort counts.
 
 `inst/benchmarks/FOLD_LABEL_TASK_BENCHMARK.md` further decomposes predictions
-into 2,204 eligible fold-label validation tasks with at least 10 held-out cells
+into 2,984 eligible fold-label validation tasks with at least 10 held-out cells
 or spots per label. Learned-neighborhood evidence passes fold-level guardrails
-in 302 tasks, and 47 dataset-label tasks are reproducible across at least two
+in 349 tasks, and 54 dataset-label tasks are reproducible across at least two
 held-out folds.
 
 The package also includes an initial null-corrected context-specific score:

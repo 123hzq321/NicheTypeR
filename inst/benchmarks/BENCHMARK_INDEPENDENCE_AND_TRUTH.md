@@ -5,18 +5,18 @@ independent biological sources, and how held-out labels are interpreted.
 
 ## Independence accounting
 
-The completed performance snapshot contains 34 benchmark configurations, but
-these are not treated as 34 independent cohorts. The biological independence
+The completed performance snapshot contains 48 benchmark configurations, but
+these are not treated as 48 independent cohorts. The biological independence
 unit is the source dataset or source accession.
 
 | Unit | Count | Interpretation |
 |---|---:|---|
-| Source datasets | 27 | primary biological independence unit |
+| Source datasets | 41 | primary biological independence unit |
 | Preview configurations | 12 | compact reproducible matrices used for the main blocked benchmark |
-| Expanded configurations | 22 | larger stress-test views for scale and robustness |
+| Expanded configurations | 36 | larger stress-test views for scale and robustness |
 | Sources with both preview and expanded configurations | 7 | paired analysis views, not independent cohorts |
-| Expanded-only source datasets | 15 | additional independent public sources |
-| Total benchmark configurations | 34 | analysis configurations, not a cohort count |
+| Expanded-only source datasets | 29 | additional independent public sources |
+| Total benchmark configurations | 48 | analysis configurations, not a cohort count |
 
 The seven source datasets represented by both preview and expanded views are:
 GSE202623, GSE333737, GSE284005, GSE327581, SQUIDPY_MERFISH,
@@ -24,7 +24,9 @@ SQUIDPY_SEQFISH and SQUIDPY_SLIDESEQV2.
 
 The expanded-only source datasets are: GSE302502, GSE282127, GSE245263,
 GSE263450, GSE294759, GSE301435, GSE308624, GSE310129, GSE317755, GSE327129,
-GSE328481, GSE330849, GSE325587, GSE273530 and GSE273952.
+GSE328481, GSE330849, GSE325587, GSE273530, GSE273952, GSE337336, GSE307588,
+GSE326743, GSE305393, GSE291308, GSE311681, GSE292268, GSE278766, GSE333479,
+GSE279181, GSE280376, GSE308167, GSE308952 and GSE336633.
 
 ## Reference-label model
 

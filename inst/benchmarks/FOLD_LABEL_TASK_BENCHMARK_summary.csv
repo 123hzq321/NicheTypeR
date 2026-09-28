@@ -1,4 +1,4 @@
 scale,n_fold_label_tasks,n_dataset_configs,total_support,median_support,learned_improved_tasks,learned_harmed_tasks,learned_guardrail_tasks,context_improved_tasks,context_harmed_tasks,context_guardrail_tasks,smoothing_guardrail_tasks,median_learned_delta_vs_marker,median_context_delta_vs_marker
-all,1461,19,265043,60.0,484,349,245,442,302,143,167,0.0,0.0
-expanded,560,7,220571,247.5,173,117,50,161,114,40,0,0.0024958970990250906,0.0005834499701982687
+all,2984,48,1069270,137.0,916,577,349,779,554,206,167,0.0009192803048983667,0.0
+expanded,2083,36,1024798,338.0,605,345,154,498,366,103,0,0.0017473794484160754,0.00028833107191315963
 preview,901,12,44472,39.0,311,232,195,281,188,103,167,0.0,0.0

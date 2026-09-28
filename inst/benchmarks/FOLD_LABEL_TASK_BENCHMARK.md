@@ -11,16 +11,16 @@ Guardrail counts use fold-label tasks with support >= 10.
 
 | scale | dataset configs | fold-label tasks | total support | learned improved | learned harmed | learned guardrail | context guardrail |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| all | 19 | 1461 | 265043 | 484 | 349 | 245 | 143 |
-| expanded | 7 | 560 | 220571 | 173 | 117 | 50 | 40 |
+| all | 48 | 2984 | 1069270 | 916 | 577 | 349 | 206 |
+| expanded | 36 | 2083 | 1024798 | 605 | 345 | 154 | 103 |
 | preview | 12 | 901 | 44472 | 311 | 232 | 195 | 103 |
 
 ## Reproducible Dataset-Label Tasks
 
 | scale | eligible dataset-label tasks | learned reproducible | context reproducible | median eligible folds |
 |---|---:|---:|---:|---:|
-| all | 407 | 37 | 8 | 3.0 |
-| expanded | 191 | 8 | 5 | 3.0 |
+| all | 940 | 54 | 12 | 3.0 |
+| expanded | 724 | 25 | 9 | 3.0 |
 | preview | 216 | 29 | 3 | 5.0 |
 
 ## Top Fold-Level Learned-Neighborhood Tasks
@@ -41,6 +41,8 @@ Guardrail counts use fold-label tasks with support >= 10.
 | preview / SQUIDPY_SEQFISH / fold 3 / Presomitic mesoderm | 270 | 0.527 | 0.684 | +0.127 |
 | preview / GEO_GSE327581_COSMX_AD_BRAIN / fold 1 / Serotonergic.neurons | 20 | 0.571 | 0.698 | +0.126 |
 | preview / GEO_GSE240015_VISIUM_THYMUS_DOMAIN / fold 2 / d0_18mo::leiden_1.0_0 | 113 | 0.197 | 0.520 | +0.120 |
+| expanded / GEO_GSE326743_GENERIC_XENIUM_EXPANDED / fold 2 / Vascular smooth muscle cells | 1254 | 0.470 | 0.598 | +0.117 |
+| expanded / GEO_GSE280376_GENERIC_XENIUM_EXPANDED / fold 1 / FB_Postn_Thbs4 | 522 | 0.018 | 0.153 | +0.117 |
 | preview / GEO_GSE327581_COSMX_AD_BRAIN / fold 1 / Neurogliaform.cells | 19 | 0.348 | 0.462 | +0.114 |
 | preview / GEO_GSE327581_COSMX_AD_BRAIN / fold 1 / Oligodendrocyte.precursor.cells | 12 | 0.629 | 0.741 | +0.112 |
 | preview / GEO_GSE327581_COSMX_AD_BRAIN / fold 4 / Olfactory.ensheathing.cells | 20 | 0.261 | 0.370 | +0.110 |
@@ -50,8 +52,6 @@ Guardrail counts use fold-label tasks with support >= 10.
 | preview / GEO_GSE327581_COSMX_AD_BRAIN / fold 4 / Granule.neurons | 36 | 0.714 | 0.813 | +0.098 |
 | preview / GEO_GSE327581_COSMX_AD_BRAIN / fold 2 / Inhibitory.neurons.habenula.hypothalamus | 17 | 0.385 | 0.483 | +0.098 |
 | preview / SQUIDPY_SEQFISH / fold 3 / Haematoendothelial progenitors | 54 | 0.434 | 0.557 | +0.097 |
-| preview / GEO_GSE327581_COSMX_AD_BRAIN / fold 2 / Inhibitory.neurons.reticular.nucleus | 14 | 0.488 | 0.579 | +0.090 |
-| preview / GEO_GSE327581_COSMX_AD_BRAIN / fold 3 / Astrocytes.thalamus.hypothalamus | 17 | 0.600 | 0.690 | +0.090 |
 
 ## Top Reproducible Dataset-Label Tasks
 
@@ -61,9 +61,11 @@ Guardrail counts use fold-label tasks with support >= 10.
 | preview / GEO_GSE327581_COSMX_AD_BRAIN / Astrocytes.thalamus.hypothalamus | 5 | 4 | +0.090 | 100 |
 | preview / SQUIDPY_SEQFISH / Erythroid | 5 | 4 | +0.033 | 300 |
 | preview / SQUIDPY_SEQFISH / Gut tube | 5 | 4 | +0.017 | 300 |
+| expanded / GEO_GSE326743_GENERIC_XENIUM_EXPANDED / Vascular smooth muscle cells | 3 | 3 | +0.043 | 2500 |
 | preview / GEO_GSE327581_COSMX_AD_BRAIN / Excitatory.neurons.hippocampal.CA1 | 5 | 3 | +0.033 | 100 |
 | expanded / GEO_GSE327581_COSMX_AD_BRAIN_EXPANDED / Astrocytes.thalamus.hypothalamus | 3 | 3 | +0.032 | 300 |
 | preview / SQUIDPY_SEQFISH / Dermomyotome | 5 | 3 | +0.029 | 300 |
+| expanded / GEO_GSE282127_GENERIC_H5AD_EXPANDED / 0 | 3 | 3 | +0.028 | 2500 |
 | preview / GEO_GSE327581_COSMX_AD_BRAIN / D1.medium.spiny.neurons | 5 | 3 | +0.024 | 100 |
 | preview / GEO_GSE327581_COSMX_AD_BRAIN / Inhibitory.neurons.habenula.hypothalamus | 5 | 3 | +0.023 | 100 |
 | preview / SQUIDPY_IMC / apoptotic tumor cell | 5 | 3 | +0.019 | 300 |
@@ -75,13 +77,11 @@ Guardrail counts use fold-label tasks with support >= 10.
 | preview / GEO_GSE284005_MERSCOPE_MS / Micro Homeo | 5 | 3 | +0.013 | 250 |
 | preview / GEO_GSE284005_MERSCOPE_MS / DA.Astro | 5 | 3 | +0.012 | 250 |
 | preview / GEO_GSE327581_COSMX_AD_BRAIN / Excitatory.neurons.layer.2.3 | 3 | 2 | +0.078 | 93 |
+| expanded / GEO_GSE263450_GENERIC_H5AD_EXPANDED / 8 | 3 | 2 | +0.055 | 2094 |
 | preview / GEO_GSE327581_COSMX_AD_BRAIN / Olfactory.ensheathing.cells | 4 | 2 | +0.055 | 91 |
 | preview / GEO_GSE327581_COSMX_AD_BRAIN / Excitatory.neurons.layer.4 | 2 | 2 | +0.046 | 90 |
 | preview / GEO_GSE327581_COSMX_AD_BRAIN / Neurogliaform.cells | 4 | 2 | +0.043 | 92 |
 | expanded / GEO_GSE327581_COSMX_AD_BRAIN_EXPANDED / Telencephalon.inhibitory.neurons | 3 | 2 | +0.034 | 300 |
-| preview / GEO_GSE327581_COSMX_AD_BRAIN / Inhibitory.neurons.reticular.nucleus | 4 | 2 | +0.025 | 92 |
-| expanded / GEO_GSE327581_COSMX_AD_BRAIN_EXPANDED / Excitatory.neurons.hippocampal.CA1 | 3 | 2 | +0.024 | 300 |
-| preview / GEO_GSE327581_COSMX_AD_BRAIN / Serotonergic.neurons | 4 | 2 | +0.023 | 91 |
 
 ## Interpretation
 

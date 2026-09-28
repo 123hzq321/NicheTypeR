@@ -1,7 +1,8 @@
 # Benchmark Snapshot
 
-This directory contains the benchmark registry and summary artifacts used for
-the Bioinformatics application-note submission snapshot.
+This directory contains the benchmark registry, reproducibility scripts and
+summary artifacts used for the NicheTypeR 0.0.6 Bioinformatics submission
+snapshot (2026-09-28).
 
 The full raw and processed spatial transcriptomics matrices are not bundled in
 the R package repository because several source files are large public GEO or
@@ -35,11 +36,12 @@ The expanded-scale stress-test snapshot is:
 - `EXPANDED_SCALE_LEAN_BENCHMARK_pairwise.csv`
 - `EXPANDED_SCALE_LEAN_BENCHMARK_per_label.csv`
 
-The current expanded-scale run covers 22 configurations and 591,155 cells or
+The current expanded-scale run covers 36 configurations and 1,025,118 cells or
 spots. Strict dataset-level guardrails remain the primary generalization
 analysis, while threshold-sensitivity files report how much support is strict,
-directional or label-specific. Across the complete snapshot, 34 configurations
-correspond to 27 source datasets. `BENCHMARK_INDEPENDENCE_AND_TRUTH.md` records
+directional or label-specific. Across the complete snapshot, 48 configurations
+cover 1,070,222 unique dataset--cell/spot units and correspond to 41 source
+datasets. `BENCHMARK_INDEPENDENCE_AND_TRUTH.md` records
 this independence accounting and explains that held-out author or
 curator-provided labels are reproducible reference labels rather than flawless
 biological ground truth.
@@ -51,7 +53,7 @@ The label-task audit snapshot is:
 - `LABEL_TASK_BENCHMARK_summary.csv`
 - `LABEL_TASK_BENCHMARK_support_bins.csv`
 
-It summarizes 663 dataset-label validation tasks across the preview and
+It summarizes 941 dataset-label validation tasks across the preview and
 expanded benchmark configurations. These tasks increase audit granularity but
 are not counted as independent datasets.
 
@@ -66,11 +68,12 @@ The threshold-sensitivity and tiered-support snapshot is:
 - `figure_threshold_sensitivity.eps`
 
 It keeps the strict dataset-level result as the primary claim, but adds
-exploratory sensitivity summaries. At the directional dataset-level cutoff
-\(\Delta>0\), learned-neighborhood evidence is positive in 14 of 34
-configurations and CSAE residual evidence is positive in 2 of 34. At
-dataset-label resolution, learned-neighborhood evidence is positive in 231 of
-663 tasks and CSAE residual evidence is positive in 123 of 663.
+exploratory sensitivity summaries. Learned-neighborhood evidence passes the
+strict guardrail in 6 of 48 configurations and CSAE residual evidence in 0 of
+48. At the directional dataset-level cutoff \(\Delta>0\), the corresponding
+counts are 17 of 48 and 5 of 48. At dataset-label resolution,
+learned-neighborhood evidence is positive in 310 of 941 tasks and CSAE residual
+evidence is positive in 167 of 941.
 
 The fold-label stability audit is:
 
@@ -80,9 +83,9 @@ The fold-label stability audit is:
 - `FOLD_LABEL_TASK_BENCHMARK_reproducibility.csv`
 - `FOLD_LABEL_TASK_BENCHMARK_reproducibility_summary.csv`
 
-It summarizes 2,204 eligible held-out fold-label validation tasks and 47
-dataset-label tasks with reproducible learned-neighborhood support across at
-least two folds.
+It summarizes 2,984 eligible held-out fold-label validation tasks, including 54
+dataset-label tasks with reproducible learned-neighborhood support and 12 with
+reproducible CSAE-residual support across at least two folds.
 
 The local GEO ingestion audit is:
 
@@ -145,3 +148,11 @@ For an installation-free smoke test, use the simulated-data workflow:
 ```r
 source(system.file("examples", "smoke_workflow.R", package = "NicheTypeR"))
 ```
+
+The scripts used to build the blocked, expanded, label-task, fold-label,
+threshold-sensitivity, external-method and manuscript-figure outputs are copied
+under `scripts/`. `SHA256SUMS.csv` records hashes for the released benchmark
+artifacts and scripts, and `SESSION_INFO.txt` records the R and Python runtime
+used for the release check. Large public expression matrices and the
+198-million-byte expanded call table are intentionally not bundled; they are
+regenerated from the public sources and scripts above.
